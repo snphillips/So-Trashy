@@ -1,7 +1,7 @@
 # project-4
 
 ## Project Description
-This site 
+This site uses New York City's Department of Sanitation montly collection data to show residents how much refuse and recycling is collected on a monthly 
 
 ## Title Brainstorm
 Rat Nest, Rat Food, NYC Waste Stats, 
