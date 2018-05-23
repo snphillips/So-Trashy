@@ -3,6 +3,9 @@
 ## Project Description
 This site uses data visualization to respresent New York City's Department of Sanitation montly collection data of refuse and recycling.
 
+## User Stories
+- I am a New York City resident and I am interested in learning about how much waste my city produces.
+
 ## Title Brainstorm
 Rat Nest, Rat Food, NYC Waste Stats, 
 
