@@ -6,6 +6,10 @@ This site uses data visualization to respresent New York City's Department of Sa
 ## User Stories
 - I am a New York City resident and I am interested in learning about how much waste my city produces.
 
+## Priority Matrix
+
+## Schedule
+
 ## Title Brainstorm
 Rat Nest, Rat Food, NYC Waste Stats, 
 
