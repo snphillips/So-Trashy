@@ -26,3 +26,7 @@ Rat Nest, Rat Food, NYC Waste Stats,
 - https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html
 - http://www.ununpentium.co.uk/pages/planets.jsp
 - https://bl.ocks.org/mbostock/4063269
+
+## Resources/Tutorials
+
+- https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
