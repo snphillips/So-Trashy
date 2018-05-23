@@ -1,5 +1,13 @@
 # project-4
 
+## Project Description
+This site 
+
+## Title Brainstorm
+Rat Nest, Rat Food, NYC Waste Stats, 
+
+
+
 ## Background Research
 
 - https://viewing.nyc/interactive-map-lets-you-track-new-york-citys-14-million-tons-of-garbage/
