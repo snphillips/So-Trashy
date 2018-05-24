@@ -6,6 +6,13 @@ This site uses data visualization to respresent New York City's Department of Sa
 ## User Stories
 - I am a New York City resident and I am interested in learning about how much waste my city produces.
 
+## Wireframes
+- Landing page: https://i.imgur.com/YDgtOw0.jpg
+- Sample page: all trash/recycling for all boroughs: https://i.imgur.com/yKh8Y8Z.jpg
+- Sample page: all trash/recycling city-wide totals: https://i.imgur.com/34ZeFxf.jpg
+- Sample page: all trash/recycling Brooklyn: https://i.imgur.com/GDkuzLs.jpg
+- Sketchbook doodles: https://i.imgur.com/ahHRqKN.jpg
+
 ## Priority Matrix
 
 ## Schedule
