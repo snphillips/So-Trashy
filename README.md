@@ -25,9 +25,11 @@ DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboar
 - Sketchbook doodles: https://i.imgur.com/ahHRqKN.jpg
 
 ## MVP
-- Visualization of all refuse
-- Visualization of all refuse, by all boroughs
+- Visualization of all refuse generate by the city
+- Visualization of all refuse generate by the city
+- Visualization of all refuse, totals by all boroughs
 - Visualization of all refuse, by borough, broken up by community district/neighborhood
+- Visualization of of 
 
 ## Post MVP
 
