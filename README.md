@@ -8,6 +8,7 @@ DSNY collects residential refuse and recycling, empties street litter baskets, c
 DSNY publishes montly reports detailing how many tons of refuse, paper/cardboard and metal/glass/plastic/drink carton has been collected, categorized by borough and further categorized into Community District (CD). Currently the monthly report *does not* contain data on how much organic material is being collected.
 
 View the DSNY Monthly Tonnage Data here: https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5
+View the DSNY Recycling Diversion and Capture Rates here: https://data.cityofnewyork.us/Environment/Recycling-Diversion-and-Capture-Rates/gaq9-z3hz
 
 ## User Stories
 - I am a **New York City resident** and I am interested in learning about how much waste my city produces to satisfy a general curiosity.
