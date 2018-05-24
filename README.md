@@ -1,7 +1,9 @@
-# project-4
+# project-4: So Trashy
 
 ## Project Description
-This site uses data visualization to respresent New York City's Department of Sanitation montly collection data of refuse and recycling.
+This site uses data visualization to respresent New York City's Department of Sanitation montly collection of refuse and recycling, by weight.
+
+New York City's Department of Sanitation (DSNY) publishes montly reports 
 
 ## User Stories
 - I am a **New York City resident** and I am interested in learning about how much waste my city produces to satisfy a general curiosity.
@@ -21,8 +23,7 @@ This site uses data visualization to respresent New York City's Department of Sa
 
 ## Schedule
 
-## Title Brainstorm
-Rat Nest, Rat Food, NYC Waste Stats, 
+
 
 
 
@@ -32,12 +33,10 @@ Rat Nest, Rat Food, NYC Waste Stats,
 - http://www.waste.exposed/
 - http://www.opentrashlab.com/research
 
-
 ## Examples of D3/Data Visualization I like
 - https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html
 - http://www.ununpentium.co.uk/pages/planets.jsp
 - https://bl.ocks.org/mbostock/4063269
 
 ## Resources/Tutorials
-
 - https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
