@@ -24,6 +24,12 @@ DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboar
 - Sample page: all trash/recycling Brooklyn: https://i.imgur.com/GDkuzLs.jpg
 - Sketchbook doodles: https://i.imgur.com/ahHRqKN.jpg
 
+## Priority Matrix
+View priority matrix here: https://i.imgur.com/DJzyqu7.jpg
+
+## React Component Chart
+coming soon....
+
 ## MVP
 - Visualization of all refuse generate by the city (landing page)
 - Visualization of all refuse generate by the city, broken down by type: trash, paper, metal/plastic/glass/carton
@@ -37,10 +43,6 @@ DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboar
 - Fun facts with a New York City twist related to the data (on rollover?)
 - Cute, hand-drawn illustrations
 - View & compare trash stats over time
-
-## Priority Matrix
-View priority matrix here: https://i.imgur.com/DJzyqu7.jpg
-
 
 ## Background Research
 - https://viewing.nyc/interactive-map-lets-you-track-new-york-citys-14-million-tons-of-garbage/
