@@ -1,11 +1,11 @@
 # Project 4: So Trashy
 
 ## Project Description
-*So Trashy* uses data visualization to respresent New York City's Department of Sanitation's (DSNY) montly collection of refuse and recycling.
+*So Trashy* uses data visualization to represent New York City's Department of Sanitation's (DSNY) monthly collection of refuse and recycling.
 
-DSNY collects residential refuse and recycling, empties street litter baskets, cleans up abandoned property such as cars, tires and bycicles and occationally collects other types of refuse, such as the detritus left in public spaces after Superstorm Sandy. It *does not* pick up commercial refuse from offices, shops, business, institutions or construction sites. The city is segmented into 59 CDs and each is serviced by their own sanitation garage.
+DSNY collects residential refuse and recycling, empties street litter baskets, cleans up abandoned property such as cars, tires and bicycles and collects other types of refuse, such as the detritus left in public spaces after Superstorm Sandy. DSNY *does not* pick up commercial refuse from offices, shops, business, institutions or construction sites. The city is segmented into 59 CDs and each is serviced by their own sanitation garage.
 
-DSNY publishes montly reports detailing how many tons of refuse, paper/cardboard and metal/glass/plastic/drink carton has been collected, categorized by borough and further categorized into Community District (CD). Currently the monthly report *does not* contain data on how much organic material is being collected.
+DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboard and metal/glass/plastic/drink carton has been collected, categorized by borough and further categorized into Community District (CD). Currently the monthly report *does not* contain data on how much organic material is being collected.
 
 - View the DSNY Monthly Tonnage Data here: https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5
 - View the DSNY Recycling Diversion and Capture Rates here: https://data.cityofnewyork.us/Environment/Recycling-Diversion-and-Capture-Rates/gaq9-z3hz
@@ -15,7 +15,7 @@ DSNY publishes montly reports detailing how many tons of refuse, paper/cardboard
 - I am an **ecologically-minded New York City resident** and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste.
 - I am a **fiscally-minded** New York City resident and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste in order to save the city money.
  - I am a **student/researcher/reporter/planner** and I'd like to use this tool for research purposes.
- - I am a **city bureaucrat** and I'm interested in learning how residents engage with and manipulate puplic data.
+ - I am a **city bureaucrat** and I'm interested in learning how residents engage with and manipulate public data.
 
 ## Wireframes
 - Landing page: https://i.imgur.com/YDgtOw0.jpg
