@@ -43,7 +43,6 @@ View priority matrix here: https://i.imgur.com/DJzyqu7.jpg
 
 
 ## Background Research
-
 - https://viewing.nyc/interactive-map-lets-you-track-new-york-citys-14-million-tons-of-garbage/
 - http://www.waste.exposed/
 - http://www.opentrashlab.com/research
@@ -60,11 +59,11 @@ View priority matrix here: https://i.imgur.com/DJzyqu7.jpg
 - Bubble Chart CodePen by Joe: https://codepen.io/jkeohan/pen/ZodEby?editors=0010
 - Joe's scatterplot workshop: https://github.com/jkeohan/scatterplot-workshop
 
+## Technologies Used
+TBD
+
 ## Code Snippet
 TBD
 
 ## Changelog
-TBD
-
-## Technologies Used
 TBD
