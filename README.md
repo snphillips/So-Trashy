@@ -39,6 +39,7 @@ DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboar
 - View & compare trash stats over time
 
 ## Priority Matrix
+View priority matrix here: https://i.imgur.com/DJzyqu7.jpg
 
 
 ## Background Research
