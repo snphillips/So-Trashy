@@ -1,9 +1,9 @@
-# project-4: So Trashy
+# Project 4: So Trashy
 
 ## Project Description
-This site uses data visualization to respresent New York City's Department of Sanitation montly collection of refuse and recycling, by weight.
+*So Trashy* uses data visualization to respresent New York City's Department of Sanitation (DSNY) montly collection of refuse and recycling.
 
-New York City's Department of Sanitation (DSNY) publishes montly reports 
+DSNY publishes montly reports detailing how many tons of refuse and recycling has been collected, categorized by Community District (CD). The city is segmented into 59 CDs and each is serviced by their own sanitation garage
 
 ## User Stories
 - I am a **New York City resident** and I am interested in learning about how much waste my city produces to satisfy a general curiosity.
