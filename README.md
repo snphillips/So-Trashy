@@ -5,7 +5,7 @@
 
 DSNY collects residential refuse, empties street litter baskets, cleans up abandoned property such as cars, tires and bycicles and occationally collects other types of refuse, such as the detritus left in public spaces after Superstorm Sandy. It *does not* pick up commercial refuse from offices, shops, business, institutions or construction sites. The city is segmented into 59 CDs and each is serviced by their own sanitation garage.
 
-DSNY publishes montly reports detailing how many tons of refuse, paper/cardboard and metal/glass/plastic/drink carton has been collected, categorized by borough and further categorized into Community District (CD). Currently the monthly resport *does not* contain data on how much organics is being collected. 
+DSNY publishes montly reports detailing how many tons of refuse, paper/cardboard and metal/glass/plastic/drink carton has been collected, categorized by borough and further categorized into Community District (CD). Currently the monthly report *does not* contain data on how much organic material is being collected. 
 
 ## User Stories
 - I am a **New York City resident** and I am interested in learning about how much waste my city produces to satisfy a general curiosity.
