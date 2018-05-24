@@ -13,7 +13,7 @@ DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboar
 ## User Stories
 - I am a **New York City resident** and I am interested in learning about how much waste my city produces to satisfy a general curiosity about how the city works.
 - I am an **ecologically-minded New York City resident** and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste.
-- I am a **fiscally-minded** New York City resident and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste in order to save the city money.
+- I am a **fiscally-minded New York City resident** and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste in order to save the city money.
  - I am a **student/researcher/reporter/planner** and I'd like to use this tool for research purposes.
  - I am a **city bureaucrat** and I'm interested in learning how residents engage with and manipulate public data.
 
