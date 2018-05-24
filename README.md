@@ -49,7 +49,7 @@ coming soon....
 - http://www.waste.exposed/
 - http://www.opentrashlab.com/research
 
-## Examples of D3/Data Visualization I like
+## Examples of Relevant D3/Data Visualizations
 - https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html
 - http://www.ununpentium.co.uk/pages/planets.jsp
 - https://bl.ocks.org/mbostock/4063269
