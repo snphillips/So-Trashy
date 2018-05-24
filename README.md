@@ -4,11 +4,11 @@
 This site uses data visualization to respresent New York City's Department of Sanitation montly collection data of refuse and recycling.
 
 ## User Stories
-- I am a New York City resident and I am interested in learning about how much waste my city produces to satisfy a general curiosity.
-- I am an ecologically-minded New York City resident and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste.
-- I am a New York City resident interested in city finances and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste to save the city money.
- - I am a student/researcher/reporter/planner and I'd like to use this tool for research purposes.
- - I am a city bureaucrat and I'm interested in learning how residents engage with and manipulate puplic data.
+- I am a **New York City resident** and I am interested in learning about how much waste my city produces to satisfy a general curiosity.
+- I am an **ecologically-minded New York City resident** and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste.
+- I am a **fiscally-minded** New York City resident and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste in order to save the city money.
+ - I am a **student/researcher/reporter/planner** and I'd like to use this tool for research purposes.
+ - I am a **city bureaucrat** and I'm interested in learning how residents engage with and manipulate puplic data.
 
 ## Wireframes
 - Landing page: https://i.imgur.com/YDgtOw0.jpg
