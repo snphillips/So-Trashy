@@ -55,7 +55,7 @@ coming soon....
 - https://bl.ocks.org/mbostock/4063269
 
 ## Resources/Tutorials
-- https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
+- How to basic D3 bubble chart: https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
 - no-think color charts: https://bl.ocks.org/mbostock/5577023
 - color picker: http://vrl.cs.brown.edu/color
 - Bubble Chart CodePen by Joe: https://codepen.io/jkeohan/pen/ZodEby?editors=0010
