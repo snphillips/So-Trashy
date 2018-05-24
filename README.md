@@ -53,6 +53,7 @@ DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboar
 ## Resources/Tutorials
 - https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
 - https://bl.ocks.org/mbostock/5577023
+- http://vrl.cs.brown.edu/color
 
 ## Code Snippet
 TBD
