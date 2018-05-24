@@ -56,6 +56,7 @@ DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboar
 - https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
 - no-think color charts: https://bl.ocks.org/mbostock/5577023
 - color picker: http://vrl.cs.brown.edu/color
+- Bubble Chart CodePen by Joe: https://codepen.io/jkeohan/pen/ZodEby?editors=0010
 
 ## Code Snippet
 TBD
