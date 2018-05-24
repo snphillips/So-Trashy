@@ -11,7 +11,7 @@ DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboar
 - View the DSNY Recycling Diversion and Capture Rates here: https://data.cityofnewyork.us/Environment/Recycling-Diversion-and-Capture-Rates/gaq9-z3hz
 
 ## User Stories
-- I am a **New York City resident** and I am interested in learning about how much waste my city produces to satisfy a general curiosity.
+- I am a **New York City resident** and I am interested in learning about how much waste my city produces to satisfy a general curiosity about how the city works.
 - I am an **ecologically-minded New York City resident** and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste.
 - I am a **fiscally-minded** New York City resident and I am interested in learning about how much waste my city produces with the goal of motivating myself to generate less waste in order to save the city money.
  - I am a **student/researcher/reporter/planner** and I'd like to use this tool for research purposes.
