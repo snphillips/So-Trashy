@@ -45,3 +45,12 @@ DSNY publishes montly reports detailing how many tons of refuse, paper/cardboard
 
 ## Resources/Tutorials
 - https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
+
+## Code Snippet
+TBD
+
+## Changelog
+TBD
+
+## Technologies Used
+TBD
