@@ -3,7 +3,7 @@
 ## Project Description
 *So Trashy* uses data visualization to respresent New York City's Department of Sanitation's (DSNY) montly collection of refuse and recycling.
 
-DSNY collects residential refuse, empties street litter baskets, cleans up abandoned property such as cars, tires and bycicles and occationally collects other types of refuse, such as clean-up public spaces after Superstorm Sandy. It does not pick up commercial refuse from offices, shops, business, institutions or construction sites. The city is segmented into 59 CDs and each is serviced by their own sanitation garage.
+DSNY collects residential refuse, empties street litter baskets, cleans up abandoned property such as cars, tires and bycicles and occationally collects other types of refuse, such as the detritus left in public spaces after Superstorm Sandy. It *does not* pick up commercial refuse from offices, shops, business, institutions or construction sites. The city is segmented into 59 CDs and each is serviced by their own sanitation garage.
 
 DSNY publishes montly reports detailing how many tons of refuse, paper/cardboard and metal/glass/plastic/drink carton has been collected, categorized by borough and further categorized into Community District (CD). Currently the monthly resport *does not* contain data on how much organics is being collected. 
 
