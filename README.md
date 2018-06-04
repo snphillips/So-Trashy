@@ -40,13 +40,6 @@ View priority matrix here: https://i.imgur.com/DJzyqu7.jpg
 - http://www.waste.exposed/
 - http://www.opentrashlab.com/research
 
-## Examples of Relevant D3/Data Visualizations
-- https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html
-- http://www.ununpentium.co.uk/pages/planets.jsp
-- https://bl.ocks.org/mbostock/4063269
-- http://projects.two-n.com/world-gender/
-- Wow: http://researchcenter.paloaltonetworks.com/app-usage-risk-report-visualization/#
-
 ## Resources/Tutorials
 - How to basic D3 bubble chart: https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
 - no-think color charts: https://bl.ocks.org/mbostock/5577023
