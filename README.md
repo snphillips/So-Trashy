@@ -72,7 +72,8 @@ d3.js
         + "</br>" + columnForRadius + " pick up"
         + "</br>" + new Intl.NumberFormat().format(Math.round(d[columnForRadius]))  + " tons"
         + "</br>" + Math.round( (d[columnForRadius] / d.population)*2000 ) + " pounds/person"
-        + "</br></br>" + "That is the equivalent of " +  Math.round(d[columnForRadius] / 225) + " Statue of Liberties!")
+        + "</br></br>" + "That is the equivalent of " +  Math.round(d[columnForRadius] / 225)
+        + " Statue of Liberties!")
 
 // ======================================================
 // Mouseover bubble effect
