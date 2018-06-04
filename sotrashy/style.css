@@ -19,6 +19,7 @@ Bubble Chart & Headers
   height: 30px;
   margin: auto;
   text-align: center;
+  display: block;
 /*   border: 2px solid #eee; */
 }
 
@@ -230,7 +231,7 @@ Media Queries
     and (max-device-width: 1024px)
     and (-webkit-min-device-pixel-ratio: 1) {
 
-    .sidenav {
+  .sidenav {
     width: 140px;
     padding: 10px;
     z-index: -1;
@@ -253,15 +254,17 @@ Media Queries
 
 /* Portrait and Landscape */
   @media only screen
+    and (min-device-width: 320px)
     and (min-device-width: 414px)
+    and (max-device-width: 568px)
     and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 2)
     and (-webkit-min-device-pixel-ratio: 3) {
 
   .sidenav {
     display: block;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
-    position: fixed;
   }
 
   .title {
@@ -274,29 +277,29 @@ Media Queries
     font-size: 100%;
     color: rgba(255,255,255,.7);
     line-height: 1.4;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   button, input.refusetype {
     padding: 3px 6px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     font-size: 200%;
     margin: 5px;
-    width: 50%;
+    width: 40%;
   }
 
   .container {
-    margin-top: 900px;
+    margin-top: 600px;
     width: 100%;
-
-  /*   border: 2px solid #eee; */
+    display: block;
   }
 
   svg {
     margin: 0 auto;
-    width: 100%;
+    width: 200%;
+    display: block;
   }
 
   #chart-description {
@@ -317,6 +320,18 @@ Media Queries
 
   .dd-menu {
     font-size: 200%;
+  }
+
+  p#rat-stat {
+    display: none;
+  }
+
+  #footer-rat {
+    display: none;
+  }
+
+  #footer {
+    display: none;
   }
 
 
