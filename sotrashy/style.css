@@ -216,3 +216,107 @@ p#rat-stat {
   font-size: 80%;
   padding: 15px 0 15px 0;
 }
+
+/* ====================================================
+Media Queries
+==================================================== */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+
+    .sidenav {
+    width: 140px;
+    padding: 10px;
+    z-index: -1;
+  }
+
+  .title {
+    font-family: 'Lovers Quarrel', cursive;
+    font-size: 250%;
+    margin: 10px 10px 10px 10px;
+  }
+
+  #sitedescription{
+    font-size: 75%;
+    line-height: 1.3;
+  }
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+
+  .sidenav {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    position: fixed;
+  }
+
+  .title {
+    font-size: 850%;
+    display: block;
+    margin: 10px 10px 20px 10px;
+  }
+
+  #sitedescription{
+    font-size: 90%;
+    color: rgba(255,255,255,.7);
+    line-height: 1.4;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  button, input.refusetype {
+    padding: 3px 6px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 200%;
+    margin: 5px;
+    width: 50%;
+  }
+
+  .container {
+    margin-top: 900px;
+    width: 100%;
+
+  /*   border: 2px solid #eee; */
+  }
+
+  svg {
+    margin: 0 auto;
+  }
+
+  #chart-description {
+    font-size: 200%;
+  }
+
+  #chart-year  {
+    font-size: 200%;
+  }
+
+  h3.weight-description {
+    font-size: 200%;
+  }
+
+  .dd-button {
+    font-size: 200%;
+}
+
+  .dd-menu {
+    font-size: 200%;
+  }
+
+
+}
+
