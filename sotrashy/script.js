@@ -1,3 +1,17 @@
+// =====================================================================
+// Acknowledgements: the structure of this code is inspired by
+// Déborah Mesquita and her article, "A gentle introduction
+// to D3: how to build a reusable bubble chart"
+// https://medium.freecodecamp.org/a-gentle-introduction-to-d3-how-to-build-a-reusable-bubble-chart-9106dc4f6c46
+
+//  My advisor was Joe Keohan whose thoughtful guidance was
+// integral to this project.
+// =====================================================================
+
+
+// ======================================================
+// Some variables to get us started
+// ======================================================
 let data;
 let node;
 let simulation;
@@ -7,18 +21,13 @@ let length;
 let scaleRadius;
 let forceX;
 const chart = bubbleChart().width(800).height(570);
-// $('#headerweight').html(`${totalrefusecollected}`);
 let columnForColors = "borough";
 let columnForRadius = "Refuse";
 width = 800;
 height = 570;
 
-function ratStat(){ d3.select("#rat-stat").html("That is the equivalent of " +  (totalrefusecollected()/365000).toFixed(1) + " Empire of State Buildings!")}
-
-
-
 // ======================================================
-// Get the the Data (first time page loads)
+// Get the the Data (first time the page loads)
 // ======================================================
 function getData() {d3.csv('https://gist.githubusercontent.com/snphillips/5b5800d535f0de281970521a30c68be1/raw/11f00d8f6ca3c5dac0adf97994a5b6949940d91c/DSNY_Monthly_Tonnage_Data_2017.csv', function(error, local_data) {
       if (error) {console.error('Error getting or parsing the data.');
