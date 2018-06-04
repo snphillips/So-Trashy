@@ -1,0 +1,218 @@
+/* ====================================================
+Generate Site-wide styling
+==================================================== */
+@import url(https://fonts.googleapis.com/css?family=Lovers+Quarrel);
+@import url(https://fonts.googleapis.com/css?family=Caveat+Brush|Gaegu);
+
+body {
+  font-family: sans-serif;
+  background-color: #262626;
+  color: rgba(255,255,255,.8);
+}
+
+
+/* ====================================================
+Bubble Chart & Headers
+==================================================== */
+.container {
+  padding: 0 0 0 150px;
+  height: 30px;
+  margin: auto;
+  text-align: center;
+/*   border: 2px solid #eee; */
+}
+
+#chart-description {
+  color: rgba(255,255,255,.8);
+  font-size: 100%;
+  text-align: center;
+  margin: 50px 0 0 0;
+  padding: 20px 0 0 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+#chart-year  {
+  color: rgba(255,255,255,.8);
+  font-size: 100%;
+  text-align: center;
+  margin: 0 0 0 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+ h3.weight-description {
+  color: rgba(255,255,255,.8);
+  font-size: 120%;
+  text-align: center;
+  margin: 5px 0 0 0;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  font-weight: 100;
+}
+
+svg {
+/*   border: 2px solid #eee;  */
+  margin: 5px 15px 15px 30px;
+}
+
+circle {
+  opacity: .92;
+}
+
+
+/* ====================================================
+Sidebar
+==================================================== */
+.sidenav {
+  height: 100%;
+  width: 170px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding: 20px;
+  z-index: -1;
+}
+
+.title {
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 350%;
+  font-weight: 100;
+  margin: 10px 10px 20px 10px;
+  color: rgba(255,255,255,.8);
+}
+
+#sitedescription{
+  font-size: 85%;
+  color: rgba(255,255,255,.7);
+  line-height: 1.4;
+}
+
+/* ====================================================
+Sidebar - Buttons
+==================================================== */
+button, input.refusetype {
+  background-color: #eee;
+  color: #34202c;
+  padding: 3px 6px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 80%;
+  margin: 5px;
+  width: 75%;
+  border-radius: 3px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+
+/* ==============================================
+Sidebar - Dropdown Button Years
+============================================== */
+.dropdown {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 5px;
+  color: rgba(0,0,0,1);
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 5px 30px 5px 10px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 80%;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+/*   The tiny black dropdown arrow */
+  border-top: 8px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+  font-size: 12px;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+}
+
+.dd-input:checked + .dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+
+/* ====================================================
+Footer
+==================================================== */
+p#rat-stat {
+  position: absolute;
+  bottom: 120px;
+/*   font-size: 90%; */
+  line-height: 1.2;
+  max-width: 170px;
+  font-family: 'Gaegu', cursive;
+  z-index: -1;
+}
+
+#footer-rat {
+  position: absolute;
+  bottom: 65px;
+  margin-left: 28px;
+  z-index: -1;
+}
+
+#footer {
+  position: absolute;
+  bottom: 25px;
+  font-size: 80%;
+  padding: 15px 0 15px 0;
+}

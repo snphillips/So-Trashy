@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>So Trashy</title>
+
+  <link rel = "stylesheet" type = "text/css" href = "style.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Cookie|Great+Vibes|Lovers+Quarrel|Monsieur+La+Doulaise|Parisienne|Playball|Ruthie|Sail" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Gaegu" rel="stylesheet">
+
+</head>
+
+<!-- ========================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.min.js"></script>
+
+
+<div class="container">
+  <h3><span id="chart-description">One Year of Trash: </span><span id="chart-year"> 2017</span></h3>
+
+  <h3 class="weight-description">Total: <span id="headerweight"></span> tons</h3>
+
+  <div class="chart-example" class="statsbyborough" id="chart"><svg></svg></div>
+  <div></div>
+</div>
+
+<div class="sidenav">
+  <h2 class="title">So Trashy</h2>
+<!--   <img src="https://i.imgur.com/tDNeVZP.png" style="width:100px; height:48px" title="rat" alt="rat"> -->
+
+   <p id="sitedescription">Visualizing one year of refuse and recycling pick up.</p>
+             <p id="sitedescription">Each circle represents what was produced by a single New York City neighborhood in one month.</p>
+     <p id="sitedescription">Numbers provided by New York City's Department of Sanitation.</p>
+
+<!--     <div class="borough-buttons"> -->
+<!--       <div><button class="borough" id="NYC-total">NYC Total</button></div> -->
+<!--           <button onclick="clusterByBorough()" type="button" class="borough" id="boroughs-cluster" value="Borough Clusters">Borough Clusters</button><br>
+          <button onclick="allBoroughs()" type="button" class="borough" id="all-boroughs" value="All Boroughs">All Boroughs</button> -->
+
+
+      <br><br>
+
+   <div>
+    <div class="type-buttons">
+      <div><input class="refusetype" type="button" value="Trash"id="refuse"></input></div>
+      <div><input class="refusetype" type="button" value="Paper & Cardboard"id="paper-cardboard"></input></div>
+      <div><input class="refusetype" type="button" value="Metal/Glass/Plastic"id="metal-glass-plastic"></input>     </div>
+    </br>
+   <div>
+
+<label class="dropdown">
+  <div class="dd-button">
+    Year
+  </div>
+
+
+  <input type="checkbox" class="dd-input">
+
+  <ul class="dd-menu" class="button">
+    <li class="year" id="button-2018" value="Update" onclick="getData2018()">2018</li>
+    <li class="year" id="button-2017" value="Update" onclick="getData2017()">2017</li>
+    <li class="year" id="button-2016" value="Update" onclick="getData2016()">2016</li>
+    <li class="year" id="button-2015" value="Update" onclick="getData2015()">2015</li>
+    <li class="year" id="button-2014" value="Update" onclick="getData2014()">2014</li>
+        </ul>
+   </div>
+
+  <p id="rat-stat">That's the weight of 6.9 Empire State Buildings!</p>
+
+ </label>
+  <img src="https://i.imgur.com/OzdLIhi.png" id="footer-rat" style="max-width:100px; max-height:43px" title="rat" alt="rat">
+<p id="footer">By Sarah N. Phillips</p>
+
+
+
+
+    <!-- ================== -->
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.min.js"></script>
+  <script type="text/javascript" src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.core.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <!-- <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script> -->
+
+</body>
+</html>
