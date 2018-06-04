@@ -208,6 +208,7 @@ p#rat-stat {
   bottom: 65px;
   margin-left: 28px;
   z-index: -1;
+  width: 50%;
 }
 
 #footer {
@@ -264,13 +265,13 @@ Media Queries
   }
 
   .title {
-    font-size: 850%;
+    font-size: 650%;
     display: block;
     margin: 10px 10px 20px 10px;
   }
 
   #sitedescription{
-    font-size: 90%;
+    font-size: 100%;
     color: rgba(255,255,255,.7);
     line-height: 1.4;
     margin-left: 20px;
@@ -295,6 +296,7 @@ Media Queries
 
   svg {
     margin: 0 auto;
+    width: 100%;
   }
 
   #chart-description {
