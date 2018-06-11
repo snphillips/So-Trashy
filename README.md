@@ -1,7 +1,7 @@
-# Project 4: So Trashy
+# So Trashy
 
 ## Project Description
-*So Trashy* uses data visualization to represent New York City's Department of Sanitation's (DSNY) monthly collection of refuse and recycling from 2014 to 2018.
+*So Trashy* uses D3.js data visualization to represent New York City's Department of Sanitation's (DSNY) monthly collection of refuse and recycling from 2014 to 2018.
 
 - View *So Trashy* here: http://sotrashy.surge.sh/
 - View Codepen here: https://codepen.io/snphillips/pen/MXKmMO
