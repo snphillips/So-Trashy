@@ -1,11 +1,12 @@
 # So Trashy
 
 ## Project Description
-*So Trashy* uses D3.js data visualization to represent New York City's Department of Sanitation's (DSNY) monthly collection of refuse and recycling from 2014 to 2018.
+*So Trashy* uses D3.js to create data visualization to represent New York City's Department of Sanitation's (DSNY) monthly collection of refuse and recycling from 2014 to 2018.
 
 - View *So Trashy* here: http://sotrashy.surge.sh/
 - View Codepen here: https://codepen.io/snphillips/pen/MXKmMO
 
+## Background
 DSNY collects residential and public school refuse and recycling, empties street litter baskets, cleans up abandoned property such as cars, tires and bicycles and collects other types of refuse, such as the detritus left in public spaces after Superstorm Sandy. DSNY *does not* pick up commercial refuse from offices, shops, business, institutions or construction sites.
 
 DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboard and metal/glass/plastic/drink carton has been collected, categorized by borough and further categorized into Community District (CD). Currently the monthly report *does not* contain data on how much organic material is being collected.
