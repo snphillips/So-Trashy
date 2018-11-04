@@ -39,7 +39,7 @@ DSNY publishes monthly reports detailing how many tons of refuse, paper/cardboar
 - http://www.waste.exposed/
 - http://www.opentrashlab.com/research
 
-## Technologies Used
+## Built With
 d3.js
 
 ## Features to be Implemented in the Future
