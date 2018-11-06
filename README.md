@@ -8,9 +8,10 @@
 <img src="https://i.imgur.com/s14l5ob.png"
      width="500"
      alt="screengrab of app"
-     display: block
-     margin-left: auto
-     margin-right: auto>
+     display: "block"
+     margin-left: "auto"
+     margin-right: "auto"
+     width: "50%">
 
 ## Background
 DSNY collects residential and public school refuse and recycling, empties street litter baskets, cleans up abandoned property such as cars, tires and bicycles and collects other types of refuse, such as the detritus left in public spaces after Superstorm Sandy. DSNY *does not* pick up commercial refuse from offices, shops, business, institutions or construction sites.
