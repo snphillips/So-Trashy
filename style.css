@@ -1,5 +1,5 @@
 /* ====================================================
-Generate Site-wide styling
+Site-wide styling
 ==================================================== */
 @import url(https://fonts.googleapis.com/css?family=Lovers+Quarrel);
 @import url(https://fonts.googleapis.com/css?family=Caveat+Brush|Gaegu);
@@ -66,8 +66,9 @@ circle {
 Sidebar
 ==================================================== */
 .sidenav {
+  background-color: rgba(64, 64, 64, .3);
   height: 100%;
-  width: 170px;
+  width: 12rem;
   position: fixed;
   z-index: 1;
   top: 0;
