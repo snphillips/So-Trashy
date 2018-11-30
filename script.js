@@ -4,8 +4,7 @@
 // to D3: how to build a reusable bubble chart"
 // https://medium.freecodecamp.org/a-gentle-introduction-to-d3-how-to-build-a-reusable-bubble-chart-9106dc4f6c46
 
-//  My advisor was Joe Keohan whose thoughtful guidance was
-// integral to this project.
+// My advisor was Joe Keohan whose thoughtful guidance was integral to this project.
 // =====================================================================
 
 

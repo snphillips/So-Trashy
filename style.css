@@ -68,7 +68,7 @@ Sidebar
 .sidenav {
   background-color: rgba(64, 64, 64, .3);
   height: 100%;
-  width: 12rem;
+  width: 14rem;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -76,6 +76,7 @@ Sidebar
   overflow-x: hidden;
   padding: 20px;
   z-index: -1;
+  font-size: 120%;
 }
 
 .title {
