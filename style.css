@@ -1,8 +1,6 @@
 /* ====================================================
 Site-wide styling
 ==================================================== */
-@import url(https://fonts.googleapis.com/css?family=Lovers+Quarrel);
-@import url(https://fonts.googleapis.com/css?family=Caveat+Brush|Gaegu);
 
 body {
   font-family: sans-serif;
@@ -10,22 +8,22 @@ body {
   color: rgba(255,255,255,.8);
 }
 
-
-/* ====================================================
-Bubble Chart & Headers
-==================================================== */
-.container {
-  padding: 0 0 0 150px;
-  height: 30px;
-  margin: auto;
-  text-align: center;
-  display: block;
-/*   border: 2px solid #eee; */
+a {
+ color: rgba(255,255,255,.5);
 }
 
+a:hover {
+ color: rgba(255,255,255,.3);
+}
+
+/* ====================================================
+Bubble Chart Headers
+==================================================== */
+h2 {
+ margin-bottom: .5rem;
+  }
+
 #chart-description {
-  color: rgba(255,255,255,.8);
-  font-size: 100%;
   text-align: center;
   margin: 50px 0 0 0;
   padding: 20px 0 0 0;
@@ -34,8 +32,6 @@ Bubble Chart & Headers
 }
 
 #chart-year  {
-  color: rgba(255,255,255,.8);
-  font-size: 100%;
   text-align: center;
   margin: 0 0 0 0;
   padding: 0;
@@ -46,15 +42,28 @@ Bubble Chart & Headers
   color: rgba(255,255,255,.8);
   font-size: 120%;
   text-align: center;
-  margin: 5px 0 0 0;
+  margin: .5rem 0 0 0;
   padding-top: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 1rem;
   font-weight: 100;
 }
 
+/* ====================================================
+Bubble Chart
+==================================================== */
+.container {
+  padding: 0 0 0 150px;
+  height: 30px;
+  margin: auto;
+  text-align: center;
+  display: block;
+/*   border: 2px solid #eee; */
+}
+
+
 svg {
-/*   border: 2px solid #eee;  */
-  margin: 5px 15px 15px 30px;
+  /*border: 1px solid #eee;*/
+  margin: 0 1rem .5rem 2rem;
 }
 
 circle {
@@ -65,21 +74,20 @@ circle {
 /* ====================================================
 Sidebar
 ==================================================== */
-.sidenav {
+.sidebar {
   background-color: rgba(64, 64, 64, .3);
   height: 100%;
   width: 14rem;
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   overflow-x: hidden;
-  padding: 20px;
+  padding: 1rem 1rem 0 1rem;
   z-index: -1;
   font-size: 120%;
 }
 
-.title {
+h1.title {
   font-family: 'Lovers Quarrel', cursive;
   font-size: 350%;
   font-weight: 100;
@@ -214,11 +222,16 @@ p#rat-stat {
   width: 50%;
 }
 
-#footer {
+footer {
   position: absolute;
-  bottom: 25px;
+  bottom: 1rem;
   font-size: 80%;
-  padding: 15px 0 15px 0;
+  padding: 1rem 0;
+}
+
+a.footer-link {
+text-decoration: none;
+color: ;
 }
 
 /* ====================================================
@@ -233,7 +246,7 @@ Media Queries
     and (max-device-width: 1024px)
     and (-webkit-min-device-pixel-ratio: 1) {
 
-  .sidenav {
+  .sidebar {
     width: 140px;
     padding: 10px;
     z-index: -1;
@@ -332,7 +345,7 @@ Media Queries
     display: none;
   }
 
-  #footer {
+  footer {
     display: none;
   }
 
