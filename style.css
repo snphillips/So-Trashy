@@ -1,9 +1,16 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Lovers+Quarrel);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+
+
 /* ====================================================
 Site-wide styling
 ==================================================== */
 
 body {
-  font-family: sans-serif;
+  font-family: 'Fira Sans', sans-serif;
+  /*font-family: sans-serif;*/
   background-color: #262626;
   color: rgba(255,255,255,.8);
 }
@@ -20,49 +27,42 @@ a:hover {
 Bubble Chart Headers
 ==================================================== */
 h2 {
+ font-family: 'Fira Sans', sans-serif;
+ text-align: center;
  margin-bottom: .5rem;
-  }
+ font-weight: 400;
+}
 
 #chart-description {
-  text-align: center;
-  margin: 50px 0 0 0;
-  padding: 20px 0 0 0;
-  padding: 0;
-  font-weight: 400;
+/* keep for d3 */
 }
 
 #chart-year  {
-  text-align: center;
-  margin: 0 0 0 0;
-  padding: 0;
-  font-weight: 400;
+/* keep for d3 */
 }
 
  h3.weight-description {
   color: rgba(255,255,255,.8);
   font-size: 120%;
-  text-align: center;
-  margin: .5rem 0 0 0;
-  padding-top: 5px;
-  padding-bottom: 1rem;
   font-weight: 100;
+  margin: .5rem 0 0 0;
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+  text-align: center;
 }
 
 /* ====================================================
 Bubble Chart
 ==================================================== */
 .container {
-  padding: 0 0 0 150px;
-  height: 30px;
+  padding: 0 0 0 10rem;
+  height: 4rem;
   margin: auto;
   text-align: center;
   display: block;
-/*   border: 2px solid #eee; */
 }
 
-
 svg {
-  /*border: 1px solid #eee;*/
   margin: 0 1rem .5rem 2rem;
 }
 
@@ -76,15 +76,15 @@ Sidebar
 ==================================================== */
 .sidebar {
   background-color: rgba(64, 64, 64, .3);
+  font-size: 120%;
   height: 100%;
-  width: 14rem;
+  width: 18rem;
   position: fixed;
   top: 0;
   left: 0;
   overflow-x: hidden;
   padding: 1rem 1rem 0 1rem;
   z-index: -1;
-  font-size: 120%;
 }
 
 h1.title {
@@ -107,11 +107,11 @@ Sidebar - Buttons
 button, input.refusetype {
   background-color: #eee;
   color: #34202c;
-  padding: 3px 6px;
+  padding: 3px .5rem;
   text-align: left;
   text-decoration: none;
   font-size: 80%;
-  margin: 5px;
+  margin: .3rem;
   width: 75%;
   border-radius: 3px;
   border: 1px solid gray;
@@ -125,15 +125,16 @@ Sidebar - Dropdown Button Years
 .dropdown {
   display: inline-block;
   position: relative;
-  margin: 0 0 0 5px;
+  margin: .5rem 0 0 .5rem;
   color: rgba(0,0,0,1);
 }
 
 .dd-button {
+  /*margin-top: 1rem;*/
   display: inline-block;
   border: 1px solid gray;
   border-radius: 3px;
-  padding: 5px 30px 5px 10px;
+  padding: .4rem 2rem .4rem .5rem;
   background-color: #ffffff;
   cursor: pointer;
   white-space: nowrap;
@@ -185,7 +186,7 @@ Sidebar - Dropdown Button Years
 }
 
 .dd-menu li {
-  padding: 10px 20px;
+  padding: .5rem 1rem;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -197,31 +198,13 @@ Sidebar - Dropdown Button Years
 .dd-menu li a {
   display: block;
   margin: -10px -20px;
-  padding: 10px 20px;
+  /*padding: 1rem 2rem;*/
 }
 
 
 /* ====================================================
 Footer
 ==================================================== */
-p#rat-stat {
-  position: absolute;
-  bottom: 120px;
-/*   font-size: 90%; */
-  line-height: 1.2;
-  max-width: 170px;
-  font-family: 'Gaegu', cursive;
-  z-index: -1;
-}
-
-#footer-rat {
-  position: absolute;
-  bottom: 65px;
-  margin-left: 28px;
-  z-index: -1;
-  width: 50%;
-}
-
 footer {
   position: absolute;
   bottom: 1rem;
@@ -236,118 +219,10 @@ color: ;
 
 /* ====================================================
 Media Queries
+TODO:
 ==================================================== */
+@media only screen and (max-width: 600px) {
 
-/* ----------- iPad 1, 2, Mini and Air ----------- */
-
-  /* Portrait and Landscape */
-  @media only screen
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (-webkit-min-device-pixel-ratio: 1) {
-
-  .sidebar {
-    width: 140px;
-    padding: 10px;
-    z-index: -1;
-  }
-
-  .title {
-    font-family: 'Lovers Quarrel', cursive;
-    font-size: 250%;
-    margin: 10px 10px 10px 10px;
-  }
-
-  #sitedescription{
-    font-size: 75%;
-    line-height: 1.3;
-  }
-
-}
-
-/* ----------- iPhone 6+, 7+ and 8+ ----------- */
-
-/* Portrait and Landscape */
-  @media only screen
-    and (min-device-width: 320px)
-    and (min-device-width: 414px)
-    and (max-device-width: 568px)
-    and (max-device-width: 736px)
-    and (-webkit-min-device-pixel-ratio: 2)
-    and (-webkit-min-device-pixel-ratio: 3) {
-
-  .sidenav {
-    display: block;
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  .title {
-    font-size: 650%;
-    display: block;
-    margin: 10px 10px 20px 10px;
-  }
-
-  #sitedescription{
-    font-size: 100%;
-    color: rgba(255,255,255,.7);
-    line-height: 1.4;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  button, input.refusetype {
-    padding: 3px 6px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 200%;
-    margin: 5px;
-    width: 40%;
-  }
-
-  .container {
-    margin-top: 600px;
-    width: 100%;
-    display: block;
-  }
-
-  svg {
-    margin: 0 auto;
-    width: 200%;
-    display: block;
-  }
-
-  #chart-description {
-    font-size: 200%;
-  }
-
-  #chart-year  {
-    font-size: 200%;
-  }
-
-  h3.weight-description {
-    font-size: 200%;
-  }
-
-  .dd-button {
-    font-size: 200%;
-}
-
-  .dd-menu {
-    font-size: 200%;
-  }
-
-  p#rat-stat {
-    display: none;
-  }
-
-  #footer-rat {
-    display: none;
-  }
-
-  footer {
-    display: none;
-  }
 
 
 }
