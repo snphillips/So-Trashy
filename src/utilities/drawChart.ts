@@ -4,7 +4,7 @@ import { DataItemType, RefuseTypes } from "../types/types";
 export function drawChart(
   data: DataItemType[],
   refuseType: RefuseTypes,
-  year: number
+  year: number,
 ) {
   // clear existing chart before we create new one
   d3.selectAll("svg > *").remove();
@@ -137,20 +137,20 @@ export function drawChart(
   const barsEnter = bars
     .enter()
     .append("rect")
-    .attr("tabindex", "0") // makes bars focusable
-    .attr("role", "img") // announces it's a graphic
-    .attr("aria-roledescription", "bar in bar chart")
-    .attr("aria-label", (d: DataItemType) => {
-      const perPerson = Math.round((d[refuseType] / getPopulation(d)) * 2000);
-      return `${d.communityDistrictName}, ${perPerson} pounds of ${refuseType} per person per year`;
-    });
+    .attr("tabindex", "0")
+    .attr("role", "img")
+    .attr("aria-roledescription", "bar in bar chart");
 
   barsEnter
     .merge(bars)
+    .attr("aria-label", (d: DataItemType) => {
+      const perPerson = Math.round((d[refuseType] / getPopulation(d)) * 2000);
+      return `${d.communityDistrictName}, ${perPerson} pounds of ${refuseType} per person per year`;
+    })
     .style("fill", (d: DataItemType): string => colorBars(d.borough))
     .attr("y", (d: DataItemType) => yScale(d.boroughDistrict) as number)
     .attr("width", (d: DataItemType) =>
-      xScale((d[refuseType] / getPopulation(d)) * 2000)
+      xScale((d[refuseType] / getPopulation(d)) * 2000),
     )
     .attr("height", yScale.bandwidth());
 
@@ -182,7 +182,7 @@ export function drawChart(
     // Reset all bars' fill colors
     g.selectAll<SVGRectElement, DataItemType>("rect").style(
       "fill",
-      (d): string => colorBars(d.borough)
+      (d): string => colorBars(d.borough),
     );
     // Highlight the clicked bar
     d3.select(this).style("fill", "#ffcd44");
@@ -244,7 +244,7 @@ export function drawChart(
   function handleMouseOver(
     this: SVGRectElement,
     event: MouseEvent | KeyboardEvent,
-    d: DataItemType
+    d: DataItemType,
   ) {
     d3.select(this).transition().duration(200).style("fill", "#ffcd44");
 
@@ -271,7 +271,7 @@ export function drawChart(
   function handleMouseOut(
     this: SVGRectElement,
     event: MouseEvent,
-    d: DataItemType
+    d: DataItemType,
   ) {
     d3.select(this)
       .transition()
@@ -322,13 +322,13 @@ export function drawChart(
     return `
           <h4>${d.communityDistrictName}</h4>
           ${tooltipYear} population: ${new Intl.NumberFormat().format(
-      getPopulation(d)
-    )} <br/>
+            getPopulation(d),
+          )} <br/>
           neighborhood total: ${new Intl.NumberFormat().format(
-            d[refuseType]
+            d[refuseType],
           )} tons/year<br/>
           per person: ${Math.round(
-            (d[refuseType] / getPopulation(d)) * 2000
+            (d[refuseType] / getPopulation(d)) * 2000,
           )} pounds/year<br/><br/>
           <p>Breakdown of refuse by percent:</p>
           <ul>${listItems}</ul>
@@ -355,7 +355,7 @@ export function drawChart(
     .text((d: DataItemType) => {
       return (
         new Intl.NumberFormat().format(
-          (d[refuseType] / getPopulation(d)) * 2000
+          (d[refuseType] / getPopulation(d)) * 2000,
         ) + " lbs/person"
       );
     })
