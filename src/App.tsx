@@ -60,7 +60,6 @@ export default function App() {
         const allRefuseTypesAdded = addAllRefuseTypes(monthsAdded);
 
         setData(allRefuseTypesAdded);
-        dataSortAscDescOrAlphabetically(allRefuseTypesAdded);
       })
       .catch((error) => {
         console.error("getData() error: ", error);
