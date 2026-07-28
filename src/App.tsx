@@ -88,11 +88,10 @@ export default function App() {
    Add key:value that contains both borough & district together
    ================================== */
   function addBoroughDistrictToData(dataArray: CityDataWeightsAsNumbersType[]) {
-    const newData = dataArray.map((entry) => {
-      const object = Object.assign({}, entry);
-      object.boroughDistrict = entry.borough + " " + entry.communitydistrict;
-      return object;
-    });
+    const newData = dataArray.map((entry) => ({
+      ...entry,
+      boroughDistrict: entry.borough + " " + entry.communitydistrict,
+    }));
     return newData;
   }
 
@@ -119,7 +118,7 @@ export default function App() {
    and adding it to the main dataset
    ================================== */
   function addNeighborhoodNamesAndPopulation(dataArray: any[]) {
-    dataArray.forEach((entry) => {
+    const newData = dataArray.map((entry) => {
       /* 
        Weird edge case: in 2020 the DSNY Monthly Tonnage by District 
        dataset introduced a Community District in Queens called 7A 
@@ -128,7 +127,7 @@ export default function App() {
        so the presence of 7A breaks the algorithm. Below, when we
        encounter it, it simply "returns" and moves onto the next entry.
        */
-      if (entry.communitydistrict === "7A") return;
+      if (entry.communitydistrict === "7A") return entry;
 
       const tempNeighbDataResult = popNeighbData.filter(
         (popEntry) => entry.boroughDistrict === popEntry.boroughDistrict,
@@ -141,12 +140,14 @@ export default function App() {
         Now put that result into entry, and move onto the next one
       */
 
-      entry.communityDistrictName =
-        tempNeighbDataResult[0].communityDistrictName;
-      entry._2020_population = tempNeighbDataResult[0]._2020_population;
-      entry._2010_population = tempNeighbDataResult[0]._2010_population;
+      return {
+        ...entry,
+        communityDistrictName: tempNeighbDataResult[0].communityDistrictName,
+        _2020_population: tempNeighbDataResult[0]._2020_population,
+        _2010_population: tempNeighbDataResult[0]._2010_population,
+      };
     });
-    return dataArray;
+    return newData;
   }
 
   /*
@@ -192,12 +193,13 @@ export default function App() {
   /* ==================================
   The raw data from the city has extra spaces in the month
   like this: '2023 / 04'. Here we remove those spaces.
+  Build a new object with { ...entry, ... } instead of writing directly onto entry
   ================================== */
   function removeExtraSpacesInMonthValue(dataArray: CityResponseDataType[]) {
-    const newData = dataArray.map((entry) => {
-      entry.month = entry.month.replace(/\s+/g, "");
-      return entry;
-    });
+    const newData = dataArray.map((entry) => ({
+      ...entry,
+      month: entry.month.replace(/\s+/g, ""),
+    }));
     return newData;
   }
 
