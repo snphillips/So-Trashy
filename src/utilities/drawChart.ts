@@ -6,12 +6,18 @@ export function drawChart(
   refuseType: RefuseTypes,
   year: number,
 ) {
+  const getPopulation = (d: DataItemType) =>
+    year >= 2020 ? d._2020_population : d._2010_population;
+
+  const LBS_PER_TON = 2000;
+  const MOBILE_BREAKPOINT_PX = 768;
+
+  const poundsPerPerson = (d: DataItemType) =>
+    (d[refuseType] / getPopulation(d)) * LBS_PER_TON;
+
   // clear existing chart before we create new one
   d3.selectAll("svg > *").remove();
   const svg = d3.select("svg");
-
-  const getPopulation = (d: DataItemType) =>
-    year >= 2020 ? d._2020_population : d._2010_population;
 
   const margin = { top: 60, right: 140, bottom: 190, left: 150 };
   const width = Number(svg.attr("width"));
@@ -65,10 +71,7 @@ export function drawChart(
   const xScale = d3
     .scaleLinear()
     // domain: the min and max value of domain(data)
-    .domain([
-      0,
-      d3.max(data, (d) => (d[refuseType] / getPopulation(d)) * 2000)!,
-    ])
+    .domain([0, d3.max(data, poundsPerPerson)!])
     // range: the min and max value of range(the visualization)
     .range([0, innerWidth]);
 
@@ -124,7 +127,7 @@ export function drawChart(
   // Determine if the device is mobile.
   // desktop tooltip
   // mobile tooltip is drawer
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= MOBILE_BREAKPOINT_PX;
 
   /* ==================================
   Drawing the Bars
@@ -144,14 +147,12 @@ export function drawChart(
   barsEnter
     .merge(bars)
     .attr("aria-label", (d: DataItemType) => {
-      const perPerson = Math.round((d[refuseType] / getPopulation(d)) * 2000);
+      const perPerson = Math.round(poundsPerPerson(d));
       return `${d.communityDistrictName}, ${perPerson} pounds of ${refuseType} per person per year`;
     })
     .style("fill", (d: DataItemType): string => colorBars(d.borough))
     .attr("y", (d: DataItemType) => yScale(d.boroughDistrict) as number)
-    .attr("width", (d: DataItemType) =>
-      xScale((d[refuseType] / getPopulation(d)) * 2000),
-    )
+    .attr("width", (d: DataItemType) => xScale(poundsPerPerson(d)))
     .attr("height", yScale.bandwidth());
 
   // Attach additional event handlers conditionally
@@ -188,20 +189,16 @@ export function drawChart(
     d3.select(this).style("fill", "#ffcd44");
 
     if (isMobile) {
-      console.log("isMobile");
       // Use the bottom shelf on mobile
       const shelf = document.getElementById("info-shelf");
       const content = shelf?.querySelector(".shelf-content");
 
       if (shelf && content) {
-        console.log("isMobile content", content);
-        console.log("isMobile shelf", shelf);
         content.innerHTML = generateTooltipHTML(d, year);
         shelf.classList.add("visible");
         shelf.classList.remove("hidden");
       }
     } else {
-      console.log("is desktop");
       // Use the floating tooltip on desktop
       tooltip.classed("hidden", false).html(generateTooltipHTML(d, year));
       const tooltipNode = tooltip.node();
@@ -282,12 +279,18 @@ export function drawChart(
   }
 
   function handleMouseMove(event: MouseEvent) {
-    // const offsetY = event.pageY < 200 ? -40 : -120;
-    const offsetY = event.pageY < 200 ? -500 : -20;
+    const tooltipNode = tooltip.node();
+    if (!tooltipNode) return;
 
-    tooltip
-      .style("left", `${event.pageX + 15}px`)
-      .style("top", `${event.pageY - offsetY}px`);
+    const { width, height } = tooltipNode.getBoundingClientRect();
+    const { x, y } = clampPosition(
+      event.pageX + 15,
+      event.pageY - 20,
+      width,
+      height,
+    );
+
+    tooltip.style("left", `${x}px`).style("top", `${y}px`);
   }
 
   function generateTooltipHTML(d: DataItemType, year: number): string {
@@ -328,7 +331,7 @@ export function drawChart(
             d[refuseType],
           )} tons/year<br/>
           per person: ${Math.round(
-            (d[refuseType] / getPopulation(d)) * 2000,
+            (d[refuseType] / getPopulation(d)) * LBS_PER_TON,
           )} pounds/year<br/><br/>
           <p>Breakdown of refuse by percent:</p>
           <ul>${listItems}</ul>
@@ -352,16 +355,12 @@ export function drawChart(
     // starting with 0 opacity, ending at 1 to help with jarring effect
     .style("opacity", 0)
     .attr("class", "label")
-    .text((d: DataItemType) => {
-      return (
-        new Intl.NumberFormat().format(
-          (d[refuseType] / getPopulation(d)) * 2000,
-        ) + " lbs/person"
-      );
-    })
-    // ! asserts that the expression is not undefined
+    .text(
+      (d: DataItemType) =>
+        new Intl.NumberFormat().format(poundsPerPerson(d)) + " lbs/person",
+    )
     .attr("y", (d) => yScale(d.boroughDistrict)! + 20)
-    .attr("x", (d) => xScale((d[refuseType] / getPopulation(d)) * 2000) + 5)
+    .attr("x", (d) => xScale(poundsPerPerson(d)) + 5)
     .style("opacity", 1);
 
   /* ==================================
