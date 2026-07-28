@@ -1,6 +1,5 @@
 import React, { useState, ChangeEvent, useEffect, useCallback } from "react";
 import * as d3 from "d3";
-import axios from "axios";
 import _lodash from "lodash";
 import popNeighbData from "./data/popNeighbData";
 import Sidebar from "./components/Sidebar";
@@ -55,17 +54,22 @@ export default function App() {
     setLoading(true);
     const openDataSourceLink = `https://data.cityofnewyork.us/resource/8bkb-pvci.json?$where=month like '%25${year}%25'`;
 
-    axios
-      .get(openDataSourceLink)
+    fetch(openDataSourceLink)
       .then((response) => {
-        cityResponseData = response.data;
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((responseData) => {
+        cityResponseData = responseData;
         // The response data needs manipulation
         // While manipulating the data, store it in tempData.
         removeExtraSpacesInMonthValue(cityResponseData);
         convertWeightStringToNumber(dataExtraSpaceInMonthRemoved);
         addBoroughDistrictToData(dataWeightsAreNumbers);
         dataWithNeighbNamesAndPop = addNeighborhoodNamesAndPopulation(
-          dataWithBoroughDistrict
+          dataWithBoroughDistrict,
         );
         add12Months(dataWithNeighbNamesAndPop);
         addAllRefuseTypes(dataMonthsAdded);
@@ -75,10 +79,20 @@ export default function App() {
       })
       .catch((error) => {
         console.error("getData() error: ", error);
-        setError("Failed to load data. Please try again later.");
+
+        if (error instanceof TypeError) {
+          // fetch throws a generic TypeError for network failures
+          // (offline, DNS failure, CORS block, etc.)
+          setError(
+            navigator.onLine
+              ? "Couldn't reach the server. Please try again later."
+              : "You appear to be offline. Please check your internet connection.",
+          );
+        } else {
+          setError("Failed to load data. Please try again later.");
+        }
         // TODO: Add a UI element to show user an error. The rat?
         // Add this to jsx {error && <p className="error-message">{error}</p>}
-        // Do one for ERR_NETWORK (check internet)
       })
       .finally(() => {
         setLoading(false);
@@ -136,7 +150,7 @@ export default function App() {
       if (entry.communitydistrict === "7A") return;
 
       tempNeighbDataResult = popNeighbData.filter(
-        (popEntry) => entry.boroughDistrict === popEntry.boroughDistrict
+        (popEntry) => entry.boroughDistrict === popEntry.boroughDistrict,
       );
 
       /* 
@@ -169,15 +183,15 @@ export default function App() {
       data.sort((a, b) =>
         d3.ascending(
           a[refuseType] / population(a),
-          b[refuseType] / population(b)
-        )
+          b[refuseType] / population(b),
+        ),
       );
     } else if (sortOrder === "sort descending") {
       data.sort((a, b) =>
         d3.descending(
           a[refuseType] / population(a),
-          b[refuseType] / population(b)
-        )
+          b[refuseType] / population(b),
+        ),
       );
     } else if (sortOrder === "sort alphabetical") {
       data.sort((a, b) => d3.descending(b.boroughDistrict, a.boroughDistrict));
@@ -186,8 +200,8 @@ export default function App() {
       data.sort((a, b) =>
         d3.ascending(
           a[refuseType] / population(a),
-          b[refuseType] / population(b)
-        )
+          b[refuseType] / population(b),
+        ),
       );
     }
 
@@ -208,10 +222,10 @@ export default function App() {
       NaNs don't break the app, but they are ugly and confusing to the user.
       */
       entry.refusetonscollected = _lodash.parseInt(
-        entry.refusetonscollected || 0
+        entry.refusetonscollected || 0,
       );
       entry.papertonscollected = _lodash.parseInt(
-        entry.papertonscollected || 0
+        entry.papertonscollected || 0,
       );
       entry.mgptonscollected = _lodash.parseInt(entry.mgptonscollected || 0);
       entry.resorganicstons = _lodash.parseInt(entry.resorganicstons || 0);
@@ -255,7 +269,7 @@ export default function App() {
       dataArrayWithUniqueDistricts,
       (item) => {
         return item.boroughDistrict;
-      }
+      },
     );
 
     /* 
@@ -273,7 +287,7 @@ export default function App() {
           dataArray,
           (item: DataItemType) => {
             return item.boroughDistrict === boroughDistrict;
-          }
+          },
         );
 
         const tonnageKeys: RefuseTypes[] = [
@@ -299,7 +313,7 @@ export default function App() {
           _2020_population: allBoroughDistricts[0]._2020_population,
           ...tonnages,
         } as DataItemType;
-      }
+      },
     );
     dataMonthsAdded = newData;
   }
