@@ -179,8 +179,6 @@ export default function App() {
         ),
       );
     }
-
-    return setData(data);
   }
 
   /* ==================================
