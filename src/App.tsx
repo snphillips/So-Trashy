@@ -119,6 +119,9 @@ export default function App() {
    ================================== */
   function addNeighborhoodNamesAndPopulation(dataArray: any[]) {
     const newData = dataArray.map((entry) => {
+      const matchedNeighb = popNeighbData.find(
+        (popEntry) => entry.boroughDistrict === popEntry.boroughDistrict,
+      );
       /* 
        Weird edge case: in 2020 the DSNY Monthly Tonnage by District 
        dataset introduced a Community District in Queens called 7A 
@@ -126,25 +129,15 @@ export default function App() {
        the New York City Population By Community Districts dataset,
        so the presence of 7A breaks the algorithm. Below, when we
        encounter it, it simply "returns" and moves onto the next entry.
+       This handles the 7A case (and any other unmatched district)
        */
-      if (entry.communitydistrict === "7A") return entry;
-
-      const tempNeighbDataResult = popNeighbData.filter(
-        (popEntry) => entry.boroughDistrict === popEntry.boroughDistrict,
-      );
-
-      /*
-        Yes? cool. Then for the current entry we're on, give it a key
-        of communityDistrictName, and assign it the value of the communityDistrictName
-        in our tempNeighbDataResult.
-        Now put that result into entry, and move onto the next one
-      */
+      if (!matchedNeighb) return entry;
 
       return {
         ...entry,
-        communityDistrictName: tempNeighbDataResult[0].communityDistrictName,
-        _2020_population: tempNeighbDataResult[0]._2020_population,
-        _2010_population: tempNeighbDataResult[0]._2010_population,
+        communityDistrictName: matchedNeighb.communityDistrictName,
+        _2020_population: matchedNeighb._2020_population,
+        _2010_population: matchedNeighb._2010_population,
       };
     });
     return newData;

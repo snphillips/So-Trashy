@@ -13,5 +13,11 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "cSpell.words": [
+    "allcollected",
+    "communitydistrict",
+    "papertonscollected",
+    "refusetonscollected"
+  ]
 }
