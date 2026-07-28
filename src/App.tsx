@@ -46,9 +46,11 @@ export default function App() {
   const getData = useCallback(
     (signal?: AbortSignal) => {
       setLoading(true);
-      const openDataSourceLink = `https://data.cityofnewyork.us/resource/8bkb-pvci.json?$where=month like '%25${year}%25'`;
+      // after
+      const whereClause = `month like '%${year}%'`;
+      const openDataSourceLink = `https://data.cityofnewyork.us/resource/8bkb-pvci.json?$where=${encodeURIComponent(whereClause)}`;
 
-      fetch(openDataSourceLink)
+      fetch(openDataSourceLink, { signal })
         .then((response) => {
           if (!response.ok) {
             throw new Error(`Request failed with status ${response.status}`);
@@ -65,7 +67,8 @@ export default function App() {
             addNeighborhoodNamesAndPopulation(withBoroughDistrict);
           const monthsAdded = add12Months(withNeighbNamesAndPop);
           const allRefuseTypesAdded = addAllRefuseTypes(monthsAdded);
-
+          //  temporary debug line
+          // console.log("allRefuseTypesAdded:", allRefuseTypesAdded);
           setData(allRefuseTypesAdded);
         })
         .catch((error) => {
@@ -82,8 +85,6 @@ export default function App() {
           } else {
             setError("Failed to load data. Please try again later.");
           }
-          // TODO: Add a UI element to show user an error. The rat?
-          // Add this to jsx {error && <p className="error-message">{error}</p>}
         })
         .finally(() => {
           if (!signal?.aborted) setLoading(false);
@@ -95,7 +96,11 @@ export default function App() {
   /* ==================================
    Add key:value that contains both borough & district together
    ================================== */
-  function addBoroughDistrictToData(dataArray: CityDataWeightsAsNumbersType[]) {
+  function addBoroughDistrictToData(
+    // We use Omit on boroughDistrict, since that field doesn't
+    // get added until addBoroughDistrictToData runs.
+    dataArray: Omit<CityDataWeightsAsNumbersType, "boroughDistrict">[],
+  ): CityDataWeightsAsNumbersType[] {
     const newData = dataArray.map((entry) => ({
       ...entry,
       boroughDistrict: entry.borough + " " + entry.communitydistrict,
@@ -185,7 +190,9 @@ export default function App() {
   like this: '2023 / 04'. Here we remove those spaces.
   Build a new object with { ...entry, ... } instead of writing directly onto entry
   ================================== */
-  function removeExtraSpacesInMonthValue(dataArray: CityResponseDataType[]) {
+  function removeExtraSpacesInMonthValue(
+    dataArray: CityResponseDataType[],
+  ): CityResponseDataType[] {
     const newData = dataArray.map((entry) => ({
       ...entry,
       month: entry.month.replace(/\s+/g, ""),
@@ -288,7 +295,9 @@ export default function App() {
       <div className="chart-container col-xs-12 col-sm-8 col-md-9 col-lg-9 col-xl-9">
         <ChartHeader year={year} refuseType={refuseType} />
         <LoadingSpinner loading={loading} />
-        {/* TODO: how to test this? */}
+        {/* TODO: need to test this? */}
+        {/* Need to simulate errors */}
+        {/* Add a UI element to show user an error. The rat? */}
         {error && <p className="error-message">{error}</p>}
         <BarChart />
       </div>

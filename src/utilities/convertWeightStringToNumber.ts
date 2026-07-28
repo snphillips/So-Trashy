@@ -1,5 +1,8 @@
-import _ from 'lodash';
-import { CityDataWeightsAsNumbersType } from '../types/types';
+import _ from "lodash";
+import {
+  CityDataWeightsAsNumbersType,
+  CityResponseDataType,
+} from "../types/types";
 
 /* ==================================
   The raw data needs changes:
@@ -7,7 +10,9 @@ import { CityDataWeightsAsNumbersType } from '../types/types';
   2) the NaN weights need to be changed to 0
   ================================== */
 
-export function convertWeightStringToNumber(data: any[]): CityDataWeightsAsNumbersType[] {
+export function convertWeightStringToNumber(
+  data: CityResponseDataType[],
+): Omit<CityDataWeightsAsNumbersType, "boroughDistrict">[] {
   return data.map((entry) => ({
     /* 
       .parseInt turns weights from strings to numbers
@@ -17,13 +22,12 @@ export function convertWeightStringToNumber(data: any[]): CityDataWeightsAsNumbe
       */
 
     ...entry,
-    refusetonscollected: _.parseInt(entry.refusetonscollected || 0),
-    papertonscollected: _.parseInt(entry.papertonscollected || 0),
-    mgptonscollected: _.parseInt(entry.mgptonscollected || 0),
-    resorganicstons: _.parseInt(entry.resorganicstons || 0),
-    leavesorganictons: _.parseInt(entry.leavesorganictons || 0),
-    schoolorganictons: _.parseInt(entry.schoolorganictons || 0),
-    xmastreetons: _.parseInt(entry.xmastreetons || 0),
-    allcollected: _.parseInt(entry.allcollected || 0),
+    refusetonscollected: _.parseInt(entry.refusetonscollected || "0"),
+    papertonscollected: _.parseInt(entry.papertonscollected || "0"),
+    mgptonscollected: _.parseInt(entry.mgptonscollected || "0"),
+    resorganicstons: _.parseInt(entry.resorganicstons || "0"),
+    leavesorganictons: _.parseInt(entry.leavesorganictons || "0"),
+    schoolorganictons: _.parseInt(entry.schoolorganictons || "0"),
+    xmastreetons: _.parseInt(entry.xmastreetons || "0"),
   }));
 }
