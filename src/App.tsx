@@ -11,21 +11,8 @@ import {
   RefuseTypes,
   DataItemType,
   CityResponseDataType,
-  AllRefuseTonsCollectedType,
   CityDataWeightsAsNumbersType,
-  WorkingDataItemType,
 } from "./types/types";
-
-// TODO: Replace the any types with custom types
-let tempNeighbDataResult: any[];
-let cityResponseData: CityResponseDataType[] = [];
-let dataExtraSpaceInMonthRemoved: CityResponseDataType[] = [];
-let dataWeightsAreNumbers: CityDataWeightsAsNumbersType[] = [];
-let dataWithBoroughDistrict: CityDataWeightsAsNumbersType[] = [];
-let dataWithNeighbNamesAndPop: WorkingDataItemType[] = [];
-let dataMonthsAdded: DataItemType[] = [];
-let dataAllRefuseTypesAdded: DataItemType[] = [];
-// const refuseCategories = ['trash','paper & cardboard','metal/glass/plastic', 'brown bin organics', 'leaves', 'christmas trees' ];
 
 export default function App() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -61,21 +48,18 @@ export default function App() {
         }
         return response.json();
       })
-      .then((responseData) => {
-        cityResponseData = responseData;
-        // The response data needs manipulation
-        // While manipulating the data, store it in tempData.
-        removeExtraSpacesInMonthValue(cityResponseData);
-        convertWeightStringToNumber(dataExtraSpaceInMonthRemoved);
-        addBoroughDistrictToData(dataWeightsAreNumbers);
-        dataWithNeighbNamesAndPop = addNeighborhoodNamesAndPopulation(
-          dataWithBoroughDistrict,
-        );
-        add12Months(dataWithNeighbNamesAndPop);
-        addAllRefuseTypes(dataMonthsAdded);
-        setData(dataAllRefuseTypesAdded);
+      .then((responseData: CityResponseDataType[]) => {
+        const cityResponseData = responseData;
+        const monthsFixed = removeExtraSpacesInMonthValue(cityResponseData);
+        const weightsAreNumbers = convertWeightStringToNumber(monthsFixed);
+        const withBoroughDistrict = addBoroughDistrictToData(weightsAreNumbers);
+        const withNeighbNamesAndPop =
+          addNeighborhoodNamesAndPopulation(withBoroughDistrict);
+        const monthsAdded = add12Months(withNeighbNamesAndPop);
+        const allRefuseTypesAdded = addAllRefuseTypes(monthsAdded);
 
-        dataSortAscDescOrAlphabetically(dataAllRefuseTypesAdded);
+        setData(allRefuseTypesAdded);
+        dataSortAscDescOrAlphabetically(allRefuseTypesAdded);
       })
       .catch((error) => {
         console.error("getData() error: ", error);
@@ -108,7 +92,8 @@ export default function App() {
       object.boroughDistrict = entry.borough + " " + entry.communitydistrict;
       return object;
     });
-    dataWithBoroughDistrict = newData;
+    // dataWithBoroughDistrict = newData;
+    return newData;
   }
 
   /* ==================================
@@ -127,9 +112,9 @@ export default function App() {
         entry.leavesorganictons;
       return newKey;
     });
-    dataAllRefuseTypesAdded = newData;
+    // dataAllRefuseTypesAdded = newData;
+    return newData;
   }
-
   /* ==================================
    Getting the neighborhood & population data from one dataset,
    and adding it to the main dataset
@@ -137,28 +122,25 @@ export default function App() {
   function addNeighborhoodNamesAndPopulation(dataArray: any[]) {
     dataArray.forEach((entry) => {
       /* 
-      Weird edge case: in 2020 the DSNY Monthly Tonnage by District 
-      dataset introduced a Community District in Queens called 7A 
-      (I don't know what that is). There is no corresponding 7A in
-      the New York City Population By Community Districts dataset,
-      so the presence of 7A breaks the algorithm. Below, when we
-      encounter it, it simply "returns" and moves onto the next entry.
-      */
-
-      // TODO: create a more robust solution where you kick out any data that doesn't
-      // appear the neighborhood dataset.
+       Weird edge case: in 2020 the DSNY Monthly Tonnage by District 
+       dataset introduced a Community District in Queens called 7A 
+       (I don't know what that is). There is no corresponding 7A in
+       the New York City Population By Community Districts dataset,
+       so the presence of 7A breaks the algorithm. Below, when we
+       encounter it, it simply "returns" and moves onto the next entry.
+       */
       if (entry.communitydistrict === "7A") return;
 
-      tempNeighbDataResult = popNeighbData.filter(
+      const tempNeighbDataResult = popNeighbData.filter(
         (popEntry) => entry.boroughDistrict === popEntry.boroughDistrict,
       );
 
-      /* 
+      /*
         Yes? cool. Then for the current entry we're on, give it a key
         of communityDistrictName, and assign it the value of the communityDistrictName
         in our tempNeighbDataResult.
         Now put that result into entry, and move onto the next one
-        */
+      */
 
       entry.communityDistrictName =
         tempNeighbDataResult[0].communityDistrictName;
@@ -236,7 +218,8 @@ export default function App() {
       return entry;
     });
 
-    dataWeightsAreNumbers = newData;
+    // dataWeightsAreNumbers = newData;
+    return newData;
   }
 
   /* ==================================
@@ -248,7 +231,8 @@ export default function App() {
       entry.month = entry.month.replace(/\s+/g, "");
       return entry;
     });
-    dataExtraSpaceInMonthRemoved = newData;
+    // dataExtraSpaceInMonthRemoved = newData;
+    return newData;
   }
 
   /* ==================================
@@ -315,7 +299,8 @@ export default function App() {
         } as DataItemType;
       },
     );
-    dataMonthsAdded = newData;
+    // dataMonthsAdded = newData;
+    return newData;
   }
 
   function refuseTypeSubmit(event: ChangeEvent<HTMLFormElement>): void {
