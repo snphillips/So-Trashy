@@ -38,50 +38,58 @@ export default function App() {
   // The getData function is wrapped with useCallback
   // to ensure it's consistent across renders
   // unless the selected year changes.
-  const getData = useCallback(() => {
-    setLoading(true);
-    const openDataSourceLink = `https://data.cityofnewyork.us/resource/8bkb-pvci.json?$where=month like '%25${year}%25'`;
+  // The if (!signal?.aborted) guard in .finally() avoids
+  // a flicker where an aborted request's cleanup briefly
+  // flips loading to false right before the new request
+  // flips it back to true.
+  const getData = useCallback(
+    (signal?: AbortSignal) => {
+      setLoading(true);
+      const openDataSourceLink = `https://data.cityofnewyork.us/resource/8bkb-pvci.json?$where=month like '%25${year}%25'`;
 
-    fetch(openDataSourceLink)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((responseData: CityResponseDataType[]) => {
-        const cityResponseData = responseData;
-        const monthsFixed = removeExtraSpacesInMonthValue(cityResponseData);
-        const weightsAreNumbers = convertWeightStringToNumber(monthsFixed);
-        const withBoroughDistrict = addBoroughDistrictToData(weightsAreNumbers);
-        const withNeighbNamesAndPop =
-          addNeighborhoodNamesAndPopulation(withBoroughDistrict);
-        const monthsAdded = add12Months(withNeighbNamesAndPop);
-        const allRefuseTypesAdded = addAllRefuseTypes(monthsAdded);
+      fetch(openDataSourceLink)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Request failed with status ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((responseData: CityResponseDataType[]) => {
+          const cityResponseData = responseData;
+          const monthsFixed = removeExtraSpacesInMonthValue(cityResponseData);
+          const weightsAreNumbers = convertWeightStringToNumber(monthsFixed);
+          const withBoroughDistrict =
+            addBoroughDistrictToData(weightsAreNumbers);
+          const withNeighbNamesAndPop =
+            addNeighborhoodNamesAndPopulation(withBoroughDistrict);
+          const monthsAdded = add12Months(withNeighbNamesAndPop);
+          const allRefuseTypesAdded = addAllRefuseTypes(monthsAdded);
 
-        setData(allRefuseTypesAdded);
-      })
-      .catch((error) => {
-        console.error("getData() error: ", error);
+          setData(allRefuseTypesAdded);
+        })
+        .catch((error) => {
+          console.error("getData() error: ", error);
 
-        if (error instanceof TypeError) {
-          // fetch throws a generic TypeError for network failures
-          // (offline, DNS failure, CORS block, etc.)
-          setError(
-            navigator.onLine
-              ? "Couldn't reach the server. Please try again later."
-              : "You appear to be offline. Please check your internet connection.",
-          );
-        } else {
-          setError("Failed to load data. Please try again later.");
-        }
-        // TODO: Add a UI element to show user an error. The rat?
-        // Add this to jsx {error && <p className="error-message">{error}</p>}
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [year]);
+          if (error instanceof TypeError) {
+            // fetch throws a generic TypeError for network failures
+            // (offline, DNS failure, CORS block, etc.)
+            setError(
+              navigator.onLine
+                ? "Couldn't reach the server. Please try again later."
+                : "You appear to be offline. Please check your internet connection.",
+            );
+          } else {
+            setError("Failed to load data. Please try again later.");
+          }
+          // TODO: Add a UI element to show user an error. The rat?
+          // Add this to jsx {error && <p className="error-message">{error}</p>}
+        })
+        .finally(() => {
+          if (!signal?.aborted) setLoading(false);
+        });
+    },
+    [year],
+  );
 
   /* ==================================
    Add key:value that contains both borough & district together
