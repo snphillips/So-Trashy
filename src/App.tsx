@@ -13,6 +13,7 @@ import {
   DataItemType,
   CityResponseDataType,
   CityDataWeightsAsNumbersType,
+  SortOrderType,
 } from "./types/types";
 
 export default function App() {
@@ -21,7 +22,7 @@ export default function App() {
   const [data, setData] = useState<DataItemType[]>([]);
   const [year, setYear] = useState(new Date().getFullYear()); // defaults to current year
   const [refuseType, setRefuseType] = useState<RefuseTypes>("allcollected");
-  const [sortOrder, setSortOrder] = useState("sort ascending");
+  const [sortOrder, setSortOrder] = useState<SortOrderType>("ascending");
 
   useEffect(() => {
     // Handle changes to data, sortOrder, and refuseType
@@ -157,34 +158,25 @@ export default function App() {
   ==================================
   */
   function dataSortAscDescOrAlphabetically(data: DataItemType[]) {
-    // We use the 2010 population data up until 2019, then 2020 data
     const population = (entry: DataItemType) =>
       year >= 2020 ? entry._2020_population : entry._2010_population;
 
-    if (sortOrder === "sort ascending") {
+    if (sortOrder === "ascending") {
       data.sort((a, b) =>
         d3.ascending(
           a[refuseType] / population(a),
           b[refuseType] / population(b),
         ),
       );
-    } else if (sortOrder === "sort descending") {
+    } else if (sortOrder === "descending") {
       data.sort((a, b) =>
         d3.descending(
           a[refuseType] / population(a),
           b[refuseType] / population(b),
         ),
       );
-    } else if (sortOrder === "sort alphabetical") {
+    } else if (sortOrder === "alphabetical") {
       data.sort((a, b) => d3.descending(b.boroughDistrict, a.boroughDistrict));
-    } else {
-      // Ascending is the default
-      data.sort((a, b) =>
-        d3.ascending(
-          a[refuseType] / population(a),
-          b[refuseType] / population(b),
-        ),
-      );
     }
   }
 
@@ -279,7 +271,7 @@ export default function App() {
   }
 
   function sortOrderRadioSubmit(event: ChangeEvent<HTMLFormElement>): void {
-    setSortOrder(event.target.value);
+    setSortOrder(event.target.value as SortOrderType);
   }
 
   return (
@@ -296,6 +288,8 @@ export default function App() {
       <div className="chart-container col-xs-12 col-sm-8 col-md-9 col-lg-9 col-xl-9">
         <ChartHeader year={year} refuseType={refuseType} />
         <LoadingSpinner loading={loading} />
+        {/* TODO: how to test this? */}
+        {error && <p className="error-message">{error}</p>}
         <BarChart />
       </div>
     </div>

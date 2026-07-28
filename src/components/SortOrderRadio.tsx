@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent } from "react";
 
 type Props = {
   sortOrderRadioSubmit: (event: ChangeEvent<HTMLFormElement>) => void;
@@ -6,9 +6,16 @@ type Props = {
 
 export default function SortOrder({ sortOrderRadioSubmit }: Props) {
   return (
-    <form className="radio-toolbar" id="radio-toolbar-sort" onChange={sortOrderRadioSubmit}>
+    <form
+      className="radio-toolbar"
+      id="radio-toolbar-sort"
+      onChange={sortOrderRadioSubmit}
+    >
       <fieldset>
-        <legend id="sort-order-radio-group-label" className="screen-reader-only">
+        <legend
+          id="sort-order-radio-group-label"
+          className="screen-reader-only"
+        >
           Choose a sort order
         </legend>
         <input
@@ -16,18 +23,27 @@ export default function SortOrder({ sortOrderRadioSubmit }: Props) {
           className="radio-sort"
           id="sort-ascending"
           name="radioSort"
-          value="sort ascending"
+          value="ascending"
           defaultChecked
         />
-
         <label htmlFor="sort-ascending">⬇ sort least to most</label>
         <br />
-
-        <input type="radio" className="radio-sort" id="sort-descending" name="radioSort" value="sort descending" />
+        <input
+          type="radio"
+          className="radio-sort"
+          id="sort-descending"
+          name="radioSort"
+          value="descending"
+        />
         <label htmlFor="sort-descending">⬆ sort most to least</label>
         <br />
-
-        <input type="radio" className="radio-sort" id="sort-alphabetical" name="radioSort" value="sort alphabetical" />
+        <input
+          type="radio"
+          className="radio-sort"
+          id="sort-alphabetical"
+          name="radioSort"
+          value="alphabetical"
+        />
         <label htmlFor="sort-alphabetical">sort alphabetical</label>
         <br />
       </fieldset>
