@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import ChartHeader from "./components/ChartHeader";
 import BarChart from "./components/BarChart";
 import { drawChart } from "./utilities/drawChart";
+import { convertWeightStringToNumber } from "./utilities/convertWeightStringToNumber";
 import LoadingSpinner from "./components/LoadingSpinner";
 import {
   RefuseTypes,
@@ -92,7 +93,6 @@ export default function App() {
       object.boroughDistrict = entry.borough + " " + entry.communitydistrict;
       return object;
     });
-    // dataWithBoroughDistrict = newData;
     return newData;
   }
 
@@ -112,7 +112,6 @@ export default function App() {
         entry.leavesorganictons;
       return newKey;
     });
-    // dataAllRefuseTypesAdded = newData;
     return newData;
   }
   /* ==================================
@@ -191,38 +190,6 @@ export default function App() {
   }
 
   /* ==================================
-  The raw data needs changes:
-  1) the refuse weights need to be changed from strings to numbers
-  2) the NaN weights need to be changed to 0
-  ================================== */
-  function convertWeightStringToNumber(dataArray: any[]) {
-    const newData = dataArray.map((entry) => {
-      /* 
-      .parseInt turns weights from strings to numbers
-      If an entry doesn't exist (which happens frequently), insert 0
-      If we don't check for non-existent entries, NaN is inserted,
-      NaNs don't break the app, but they are ugly and confusing to the user.
-      */
-      entry.refusetonscollected = _lodash.parseInt(
-        entry.refusetonscollected || 0,
-      );
-      entry.papertonscollected = _lodash.parseInt(
-        entry.papertonscollected || 0,
-      );
-      entry.mgptonscollected = _lodash.parseInt(entry.mgptonscollected || 0);
-      entry.resorganicstons = _lodash.parseInt(entry.resorganicstons || 0);
-      entry.leavesorganictons = _lodash.parseInt(entry.leavesorganictons || 0);
-      entry.schoolorganictons = _lodash.parseInt(entry.schoolorganictons || 0);
-      entry.xmastreetons = _lodash.parseInt(entry.xmastreetons || 0);
-      entry.allcollected = _lodash.parseInt(entry.allcollected || 0);
-      return entry;
-    });
-
-    // dataWeightsAreNumbers = newData;
-    return newData;
-  }
-
-  /* ==================================
   The raw data from the city has extra spaces in the month
   like this: '2023 / 04'. Here we remove those spaces.
   ================================== */
@@ -231,7 +198,6 @@ export default function App() {
       entry.month = entry.month.replace(/\s+/g, "");
       return entry;
     });
-    // dataExtraSpaceInMonthRemoved = newData;
     return newData;
   }
 
@@ -299,7 +265,6 @@ export default function App() {
         } as DataItemType;
       },
     );
-    // dataMonthsAdded = newData;
     return newData;
   }
 
