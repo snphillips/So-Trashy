@@ -6,14 +6,14 @@
   "dependencies": {
     "@types/jest": "^29.5.3",
     "@types/node": "^20.5.0",
-    "axios": "^1.8.4",
+    "axios": "^1.18.1",
     "d3": "^7.9.0",
     "d3-fetch": "^3.0.1",
     "d3-request": "^1.0.6",
-    "lodash": "^4.17.21",
+    "lodash": "^4.18.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-spinners": "^0.15.0"
+    "react-spinners": "^0.17.0"
   },
   "scripts": {
     "start": "vite",
@@ -28,19 +28,19 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@eslint/js": "^9.23.0",
-    "@types/d3": "^7.4.0",
-    "@types/lodash": "^4.14.197",
+    "@eslint/js": "^10.0.1",
+    "@types/d3": "^7.4.3",
+    "@types/lodash": "^4.17.24",
     "@types/react": "^18.3.19",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "babel-core": "^6.26.3",
     "globals": "^16.0.0",
     "typescript": "^5.8.2",
-    "typescript-eslint": "^8.28.0",
+    "typescript-eslint": "^8.65.0",
     "vite": "^6.2.5",
-    "vite-plugin-svgr": "^4.3.0",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-plugin-svgr": "^5.2.0",
+    "vite-tsconfig-paths": "^6.1.1"
   },
   "description": "## Project Description So Trashy is a data visualization that compares New York City's Department of Sanitation's (DSNY) monthly collection of refuse and recycling across New York City community districts/neighborhoods. So Trashy displays the latest information provided by DSNY via open data APIs.",
   "main": "index.js",
