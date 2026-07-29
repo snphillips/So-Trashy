@@ -10,6 +10,16 @@ import {
 
 const LBS_PER_TON = 2000;
 
+function getOrCreateGroup(
+  parent: d3.Selection<SVGGElement, unknown, null, undefined>,
+  className: string,
+) {
+  const selection = parent.select<SVGGElement>(`.${className}`);
+  return selection.empty()
+    ? parent.append("g").attr("class", className)
+    : selection;
+}
+
 export function drawChart(
   data: DataItemType[],
   refuseType: RefuseTypes,
@@ -54,23 +64,12 @@ export function drawChart(
     .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-  let yAxisGroup = g.select<SVGGElement>(".y-axis");
-  if (yAxisGroup.empty()) {
-    yAxisGroup = g.append("g").attr("class", "y-axis");
-  }
-
-  let xAxisTopGroup = g.select<SVGGElement>(".x-axis-top");
-  if (xAxisTopGroup.empty()) {
-    xAxisTopGroup = g.append("g").attr("class", "x-axis-top");
-  }
-
-  let xAxisBottomGroup = g.select<SVGGElement>(".x-axis-bottom");
-  if (xAxisBottomGroup.empty()) {
-    xAxisBottomGroup = g
-      .append("g")
-      .attr("class", "x-axis-bottom")
-      .attr("transform", `translate(0, ${innerHeight})`);
-  }
+  const yAxisGroup = getOrCreateGroup(g, "y-axis");
+  const xAxisTopGroup = getOrCreateGroup(g, "x-axis-top");
+  const xAxisBottomGroup = getOrCreateGroup(g, "x-axis-bottom").attr(
+    "transform",
+    `translate(0, ${innerHeight})`,
+  );
 
   yAxisGroup.call(d3.axisLeft(yScale));
   xAxisTopGroup.call(d3.axisTop(xScale));
@@ -216,19 +215,22 @@ export function drawChart(
   });
 
   /* Bar Labels */
-  g.selectAll(".text")
-    .data(data)
+  const labels = g.selectAll<SVGTextElement, DataItemType>(".label").data(data);
+
+  labels.exit().remove();
+
+  labels
     .enter()
     .append("text")
-    .style("opacity", 0)
     .attr("class", "label")
+    .merge(labels)
+    .style("opacity", 0)
     .text(
-      (d: DataItemType) =>
-        new Intl.NumberFormat().format(poundsPerPerson(d)) + " lbs/person",
+      (d) => new Intl.NumberFormat().format(poundsPerPerson(d)) + " lbs/person",
     )
     .attr("y", (d) => yScale(d.boroughDistrict)! + 20)
     .attr("x", (d) => xScale(poundsPerPerson(d)) + 5)
     .style("opacity", 1);
 
-  g.selectAll("rect").data(data).exit().transition().duration(500).remove();
+  bars.exit().transition().duration(500).remove();
 }
