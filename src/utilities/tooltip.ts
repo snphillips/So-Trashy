@@ -40,11 +40,14 @@ export function clampPosition(
   width: number,
   height: number,
 ) {
-  const maxX = window.innerWidth - width;
-  const maxY = window.innerHeight - height;
+  const minX = window.scrollX + 15;
+  const minY = window.scrollY + 15;
+  const maxX = window.scrollX + window.innerWidth - width;
+  const maxY = window.scrollY + window.innerHeight - height;
+
   return {
-    x: Math.min(Math.max(x, 15), maxX),
-    y: Math.min(Math.max(y, 15), maxY),
+    x: Math.min(Math.max(x, minX), maxX),
+    y: Math.min(Math.max(y, minY), maxY),
   };
 }
 
