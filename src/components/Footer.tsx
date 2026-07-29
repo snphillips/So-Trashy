@@ -13,8 +13,7 @@ export default function Footer() {
           href="https://github.com/snphillips/So-Trashy-React"
           id="github-link"
         >
-          View code on Github{" "}
-          <i className="fa fa-github" aria-hidden="true"></i>
+          Github <i className="fa fa-github" aria-hidden="true"></i>
         </a>
       </p>
     </footer>
