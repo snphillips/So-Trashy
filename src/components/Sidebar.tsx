@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import { ChangeEvent } from "react";
 import RefuseTypeButtonsRadio from "./RefuseTypeButtonsRadio";
 import YearButton from "./YearButton";
 import SortOrderRadio from "./SortOrderRadio";
@@ -27,19 +27,12 @@ export default function Sidebar({
           pick-up in New York City.
         </p>
 
-        <YearButton year={year} yearDropdownSubmit={yearDropdownSubmit} />
+        <div className="sidebar-sorting-button-section">
+          <YearButton year={year} yearDropdownSubmit={yearDropdownSubmit} />
+          <RefuseTypeButtonsRadio refuseTypeSubmit={refuseTypeSubmit} />
+          <SortOrderRadio sortOrderRadioSubmit={sortOrderRadioSubmit} />
+        </div>
 
-        <RefuseTypeButtonsRadio refuseTypeSubmit={refuseTypeSubmit} />
-
-        <SortOrderRadio sortOrderRadioSubmit={sortOrderRadioSubmit} />
-
-        <br />
-        <p className="sidebar-text sidebar-link">
-          <a href="https://opendata.cityofnewyork.us/" id="open-data-link">
-            Data: NYC Open Data{" "}
-            <i className="fa fa-external-link-square" aria-hidden="true"></i>{" "}
-          </a>
-        </p>
         <p className="sidebar-text sidebar-link">
           <a
             href="https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5"

@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="sidebar-footer" aria-label="Website footer">
       <p className="sidebar-link">
-        <a href="https://sarahphillipsdev.surge.sh" id="portfolio-link">
-          Created by Sarah Phillips
+        <a href="https://sarahphillipsdev.netlify.app/" id="portfolio-link">
+          by Sarah Phillips
         </a>
       </p>
       <p className="sidebar-link">

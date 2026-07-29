@@ -228,6 +228,10 @@ form {
   flex: 1; /* fill available space */
   display: flex;
   flex-direction: column;
+  /* gap: 1rem; */
+}
+.sidebar-sorting-button-section {
+  margin-bottom: 1rem;
 }
 
 .sidebar-footer {
