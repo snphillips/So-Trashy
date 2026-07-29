@@ -1,5 +1,6 @@
 import * as d3 from "d3";
 import { DataItemType, RefuseTypes } from "../types/types";
+import { formatPoundsPerPerson } from "./formatPoundsPerPerson";
 
 const MOBILE_BREAKPOINT_PX = 768;
 
@@ -93,8 +94,7 @@ export function generateTooltipHTML(
     <h4>${d.communityDistrictName}</h4>
     ${tooltipYear} population: ${new Intl.NumberFormat().format(getPopulation(d))} <br/>
     neighborhood total: ${new Intl.NumberFormat().format(d[refuseType])} tons/year<br/>
-    per person: ${Math.round((d[refuseType] / getPopulation(d)) * 2000)} pounds/year<br/><br/>
-    <p>Breakdown of refuse by percent:</p>
+    per person: ${Math.round((d[refuseType] / getPopulation(d)) * 2000)} pounds/year<br/><br/>per person: ${formatPoundsPerPerson((d[refuseType] / getPopulation(d)) * 2000)} pounds/year<br/><br/>    <p>Breakdown of refuse by percent:</p>
     <ul>${listItems}</ul>
   `;
 }

@@ -7,6 +7,7 @@ import {
   isMobileViewport,
   generateTooltipHTML,
 } from "./tooltip";
+import { formatPoundsPerPerson } from "./formatPoundsPerPerson";
 
 const LBS_PER_TON = 2000;
 
@@ -226,7 +227,8 @@ export function drawChart(
     .merge(labels)
     .style("opacity", 0)
     .text(
-      (d) => new Intl.NumberFormat().format(poundsPerPerson(d)) + " lbs/person",
+      (d: DataItemType) =>
+        formatPoundsPerPerson(poundsPerPerson(d)) + " lbs/person",
     )
     .attr("y", (d) => yScale(d.boroughDistrict)! + 20)
     .attr("x", (d) => xScale(poundsPerPerson(d)) + 5)
