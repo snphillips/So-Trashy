@@ -51,7 +51,7 @@ export function drawChart(
 
   const xScale = d3
     .scaleLinear()
-    .domain([0, d3.max(data, poundsPerPerson)!])
+    .domain([0, d3.max(data, poundsPerPerson) || 1])
     .range([0, innerWidth]);
 
   const yScale = d3
