@@ -5,7 +5,8 @@ export default function Footer() {
     <footer className="sidebar-footer" aria-label="Website footer">
       <p className="sidebar-link">
         <a href="https://sarahphillipsdev.netlify.app/" id="portfolio-link">
-          by Sarah Phillips
+          by Sarah Phillips{" "}
+          <i className="fa fa-external-link-square" aria-hidden="true"></i>
         </a>
       </p>
       <p className="sidebar-link">

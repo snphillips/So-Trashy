@@ -273,4 +273,5 @@ export interface RefuseDataNoteType {
   year: number;
   refuseType: RefuseTypes;
   note: string;
+  dataAvailable: boolean; // false = no data exists at all, grey out the button
 }
