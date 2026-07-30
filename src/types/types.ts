@@ -257,6 +257,7 @@ export interface PopNeighbDataType {
   communitydistrict: CommunityDistrictNumberType;
   _2010_population: number;
   _2020_population: number;
+  _2030_population: number;
 }
 
 export interface AllRefuseTonsCollectedType {
@@ -266,4 +267,10 @@ export interface AllRefuseTonsCollectedType {
   resorganicstons: number;
   leavesorganictons: number;
   xmastreetons: number;
+}
+
+export interface RefuseDataNoteType {
+  year: number;
+  refuseType: RefuseTypes;
+  note: string;
 }
