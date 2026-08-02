@@ -11,7 +11,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 91497,
     _2020_population: 100929,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName: "Melrose, Mott Haven, Port Morris",
     communitydistrict: "01",
@@ -20,7 +20,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 52246,
     _2020_population: 54454,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName: "Hunts Point, Longwood",
     communitydistrict: "02",
@@ -29,7 +29,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 79762,
     _2020_population: 93755,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName: "Claremont, Crotona Park East, Melrose, Morrisania",
     communitydistrict: "03",
@@ -38,7 +38,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 146441,
     _2020_population: 150436,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName:
       "Concourse, Concourse Village, East Concourse, Highbridge, Mount Eden",
@@ -48,7 +48,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 128200,
     _2020_population: 132584,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName:
       "Fordham, Morris Heights, Mount Hope, University Heights",
@@ -58,7 +58,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 83268,
     _2020_population: 89216,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName:
       "Bathgate, Belmont, Bronx Park South, East Tremont, West Farms",
@@ -68,7 +68,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 139286,
     _2020_population: 146813,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName:
       "Bedford Park, Fordham, Kingsbridge Heights, Norwood, University Heights",
@@ -78,7 +78,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 101731,
     _2020_population: 106924,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName:
       "Fieldston, Kingsbridge, Marble Hill, Riverdale, Spuyten Duyvil",
@@ -88,7 +88,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 172298,
     _2020_population: 188249,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName:
       "Bronx River, Castle Hill, Clason Point, Harding Park, Parkchester, Soundview",
@@ -98,7 +98,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 120392,
     _2020_population: 130763,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName: "Throgs Neck, Co-op City, Pelham Bay",
     communitydistrict: "10",
@@ -107,7 +107,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 113232,
     _2020_population: 119666,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName: "Pelham Pkwy, Morris Park, Laconia",
     communitydistrict: "11",
@@ -116,7 +116,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 152344,
     _2020_population: 163489,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Bronx",
     communityDistrictName: "Wakefield, Williamsbridge",
     communitydistrict: "12",
@@ -125,7 +125,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 173083,
     _2020_population: 204125,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Williamsburg, Greenpoint",
     communitydistrict: "01",
@@ -134,7 +134,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 99617,
     _2020_population: 130021,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName:
       "Brooklyn Heights, Fort Greene, Downtown Brooklyn, Boerum Hill",
@@ -144,7 +144,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 152985,
     _2020_population: 174960,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName:
       "Bedford-Stuyvesant, Stuyvesant Heights, Tompkins Park North",
@@ -154,7 +154,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 112634,
     _2020_population: 120747,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Bushwick",
     communitydistrict: "04",
@@ -163,7 +163,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 182896,
     _2020_population: 200293,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName:
       "East New York, Broadway Junction, City Line, Cypress Hills, New Lots",
@@ -173,7 +173,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 104709,
     _2020_population: 113933,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName:
       "Park Slope, Carroll Gardens, Cobble Hill, Gowanus, Red Hook",
@@ -183,7 +183,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 126230,
     _2020_population: 133230,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Sunset Park, Windsor Terrace",
     communitydistrict: "07",
@@ -192,7 +192,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 96317,
     _2020_population: 108259,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Crown Heights, Prospect Heights, Weeksville",
     communitydistrict: "08",
@@ -201,7 +201,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 98429,
     _2020_population: 102000,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Crown Heights South, Wingate",
     communitydistrict: "09",
@@ -210,7 +210,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 124491,
     _2020_population: 136071,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Bay Ridge, Dyker Heights",
     communitydistrict: "10",
@@ -219,7 +219,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 181981,
     _2020_population: 198870,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Bensonhurst, Bath Beach ",
     communitydistrict: "11",
@@ -228,7 +228,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 191382,
     _2020_population: 205377,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Borough Park, Ocean Parkway",
     communitydistrict: "12",
@@ -237,7 +237,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 104278,
     _2020_population: 108905,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Coney Island, Brighton Beach",
     communitydistrict: "13",
@@ -246,7 +246,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 160664,
     _2020_population: 164568,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Ditmas Park, Flatbush, Midwood, Ocean Parkway",
     communitydistrict: "14",
@@ -255,7 +255,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 159650,
     _2020_population: 169632,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Sheepshead Bay, Gerritsen Beach",
     communitydistrict: "15",
@@ -264,7 +264,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 86468,
     _2020_population: 98506,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Brownsville, Ocean Hill",
     communitydistrict: "16",
@@ -273,7 +273,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 155252,
     _2020_population: 162446,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName:
       "East Flatbush, Farragut, Flatbush, Northeast Flatbush, Remsen Village, Rugby, Erasmus",
@@ -283,7 +283,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 193543,
     _2020_population: 204095,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Brooklyn",
     communityDistrictName: "Canarsie, Flatlands",
     communitydistrict: "18",
@@ -292,7 +292,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 60978,
     _2020_population: 78390,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName: "Battery Park City, Tribeca",
     communitydistrict: "01",
@@ -301,7 +301,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 90016,
     _2020_population: 92445,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName: "Greenwich Village, Soho",
     communitydistrict: "02",
@@ -310,7 +310,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 163277,
     _2020_population: 163141,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName: "Lower East Side, Chinatown",
     communitydistrict: "03",
@@ -319,7 +319,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 103245,
     _2020_population: 131351,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName: "Chelsea, Clinton",
     communitydistrict: "04",
@@ -328,7 +328,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 51673,
     _2020_population: 63600,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName: "Midtown Business District",
     communitydistrict: "05",
@@ -337,7 +337,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 142745,
     _2020_population: 155614,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName: "Stuyvesant Town, Turtle Bay",
     communitydistrict: "06",
@@ -346,7 +346,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 209084,
     _2020_population: 222129,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName: "West Side, Upper West Side",
     communitydistrict: "07",
@@ -355,7 +355,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 219920,
     _2020_population: 231983,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName:
       "Upper East Side, Carnegie Hill, Lenox Hill, Roosevelt Island, Yorkville",
@@ -365,7 +365,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 110193,
     _2020_population: 110458,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName: "Manhattanville, Hamilton Heights",
     communitydistrict: "09",
@@ -374,7 +374,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 115723,
     _2020_population: 115723,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName: "Central Harlem",
     communitydistrict: "10",
@@ -383,7 +383,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 120511,
     _2020_population: 125771,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName:
       "East Harlem, Harlem, Randall's Island, Wards Island",
@@ -393,7 +393,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 190020,
     _2020_population: 180206,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Manhattan",
     communityDistrictName: "Washington Heights, Inwood",
     communitydistrict: "12",
@@ -402,7 +402,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 191105,
     _2020_population: 196803,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Astoria, Long Island City",
     communitydistrict: "01",
@@ -411,7 +411,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 113200,
     _2020_population: 137981,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Sunnyside, Woodside",
     communitydistrict: "02",
@@ -420,7 +420,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 171576,
     _2020_population: 179134,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Jackson Heights, North Corona",
     communitydistrict: "03",
@@ -429,7 +429,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 172598,
     _2020_population: 181025,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Elmhurst, South Corona",
     communitydistrict: "04",
@@ -438,7 +438,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 169190,
     _2020_population: 178178,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Ridgewood, Glendale, Maspeth",
     communitydistrict: "05",
@@ -447,7 +447,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 113257,
     _2020_population: 120955,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Forest Hills, Rego Park",
     communitydistrict: "06",
@@ -456,7 +456,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 247354,
     _2020_population: 269587,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Flushing, Bay Terrace",
     communitydistrict: "07",
@@ -465,7 +465,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 151107,
     _2020_population: 161402,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Fresh Meadows, Briarwood",
     communitydistrict: "08",
@@ -474,7 +474,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 143317,
     _2020_population: 152839,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Woodhaven, Richmond Hill",
     communitydistrict: "09",
@@ -483,7 +483,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 122396,
     _2020_population: 129411,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Ozone Park, Howard Beach",
     communitydistrict: "10",
@@ -492,7 +492,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 116431,
     _2020_population: 122211,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Bayside, Douglaston, Little Neck",
     communitydistrict: "11",
@@ -501,7 +501,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 225919,
     _2020_population: 226278,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Jamaica, St. Albans, Hollis",
     communitydistrict: "12",
@@ -510,7 +510,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 188593,
     _2020_population: 199218,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "Queens Village, Rosedale",
     communitydistrict: "13",
@@ -519,7 +519,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 114978,
     _2020_population: 124173,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Queens",
     communityDistrictName: "The Rockaways, Broad Channel",
     communitydistrict: "14",
@@ -528,7 +528,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 175756,
     _2020_population: 189663,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Staten Island",
     communityDistrictName: "Stapleton, Port Richmond",
     communitydistrict: "01",
@@ -537,7 +537,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 132003,
     _2020_population: 140795,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Staten Island",
     communityDistrictName: "New Springville, South Beach",
     communitydistrict: "02",
@@ -546,7 +546,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 160209,
     _2020_population: 164723,
-    _2023_population: 0,
+    _2030_population: 0,
     borough: "Staten Island",
     communityDistrictName: "Tottenville, Woodrow, Great Kills",
     communitydistrict: "03",

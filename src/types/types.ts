@@ -249,6 +249,7 @@ export interface DataItemType {
   xmastreetons: number;
   _2010_population: number;
   _2020_population: number;
+  _2030_population: number;
 }
 export interface PopNeighbDataType {
   borough: BoroughType;
