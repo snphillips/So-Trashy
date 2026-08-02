@@ -324,8 +324,13 @@ note: these are radio buttons in disguise;
 }
 
 .radio-toolbar input[type="radio"]:disabled + label {
-  opacity: 0.4;
+  opacity: 0.6;
   cursor: not-allowed;
+}
+.radio-toolbar input[type="radio"]:disabled + label:hover {
+  /* opacity: 0.6; */
+  /* cursor: not-allowed; */
+  background-color: var(--yellow);
 }
 
 /*****************************************

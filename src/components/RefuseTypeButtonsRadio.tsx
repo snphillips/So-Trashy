@@ -11,6 +11,7 @@ export default function RefuseTypeButtonsRadio({
   year,
 }: Props) {
   const organicsAvailable = isRefuseTypeAvailable(year, "resorganicstons");
+  const leavesAvailable = isRefuseTypeAvailable(year, "leavesorganictons");
   return (
     <form
       className="radio-toolbar"
@@ -85,8 +86,14 @@ export default function RefuseTypeButtonsRadio({
           name="radioType"
           id="leavesorganictons"
           value="leaves"
+          disabled={!leavesAvailable}
         />
-        <label htmlFor="leavesorganictons">🍂 leaves</label>
+        <label
+          htmlFor="leavesorganictons"
+          className={!leavesAvailable ? "disabled-label" : ""}
+        >
+          🍂 leaves
+        </label>
         <br />
 
         <input
