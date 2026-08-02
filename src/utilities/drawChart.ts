@@ -11,8 +11,8 @@ import { formatPoundsPerPerson } from "./formatPoundsPerPerson";
 
 const LBS_PER_TON = 2000;
 
-function getOrCreateGroup(
-  parent: d3.Selection<SVGGElement, unknown, null, undefined>,
+function getOrCreateGroup<PElement extends d3.BaseType, PDatum>(
+  parent: d3.Selection<SVGGElement, unknown, PElement, PDatum>,
   className: string,
 ) {
   const selection = parent.select<SVGGElement>(`.${className}`);

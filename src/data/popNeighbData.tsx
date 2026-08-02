@@ -38,7 +38,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 146441,
     _2020_population: 150436,
-    _2030_population: 111111,
+    _2030_population: 150436,
     borough: "Bronx",
     communityDistrictName:
       "Concourse, Concourse Village, East Concourse, Highbridge, Mount Eden",
@@ -48,7 +48,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 128200,
     _2020_population: 132584,
-    _2030_population: 111111,
+    _2030_population: 132584,
     borough: "Bronx",
     communityDistrictName:
       "Fordham, Morris Heights, Mount Hope, University Heights",
@@ -58,7 +58,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 83268,
     _2020_population: 89216,
-    _2030_population: 111111,
+    _2030_population: 89216,
     borough: "Bronx",
     communityDistrictName:
       "Bathgate, Belmont, Bronx Park South, East Tremont, West Farms",
@@ -68,7 +68,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 139286,
     _2020_population: 146813,
-    _2030_population: 111111,
+    _2030_population: 146813,
     borough: "Bronx",
     communityDistrictName:
       "Bedford Park, Fordham, Kingsbridge Heights, Norwood, University Heights",
@@ -78,7 +78,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 101731,
     _2020_population: 106924,
-    _2030_population: 111111,
+    _2030_population: 106924,
     borough: "Bronx",
     communityDistrictName:
       "Fieldston, Kingsbridge, Marble Hill, Riverdale, Spuyten Duyvil",
@@ -88,7 +88,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 172298,
     _2020_population: 188249,
-    _2030_population: 111111,
+    _2030_population: 188249,
     borough: "Bronx",
     communityDistrictName:
       "Bronx River, Castle Hill, Clason Point, Harding Park, Parkchester, Soundview",
@@ -98,7 +98,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 120392,
     _2020_population: 130763,
-    _2030_population: 111111,
+    _2030_population: 130763,
     borough: "Bronx",
     communityDistrictName: "Throgs Neck, Co-op City, Pelham Bay",
     communitydistrict: "10",
@@ -107,7 +107,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 113232,
     _2020_population: 119666,
-    _2030_population: 111111,
+    _2030_population: 119666,
     borough: "Bronx",
     communityDistrictName: "Pelham Pkwy, Morris Park, Laconia",
     communitydistrict: "11",
@@ -116,7 +116,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 152344,
     _2020_population: 163489,
-    _2030_population: 111111,
+    _2030_population: 163489,
     borough: "Bronx",
     communityDistrictName: "Wakefield, Williamsbridge",
     communitydistrict: "12",
@@ -125,7 +125,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 173083,
     _2020_population: 204125,
-    _2030_population: 111111,
+    _2030_population: 204125,
     borough: "Brooklyn",
     communityDistrictName: "Williamsburg, Greenpoint",
     communitydistrict: "01",
@@ -134,7 +134,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 99617,
     _2020_population: 130021,
-    _2030_population: 111111,
+    _2030_population: 130021,
     borough: "Brooklyn",
     communityDistrictName:
       "Brooklyn Heights, Fort Greene, Downtown Brooklyn, Boerum Hill",
@@ -144,7 +144,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 152985,
     _2020_population: 174960,
-    _2030_population: 111111,
+    _2030_population: 174960,
     borough: "Brooklyn",
     communityDistrictName:
       "Bedford-Stuyvesant, Stuyvesant Heights, Tompkins Park North",
@@ -154,7 +154,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 112634,
     _2020_population: 120747,
-    _2030_population: 111111,
+    _2030_population: 120747,
     borough: "Brooklyn",
     communityDistrictName: "Bushwick",
     communitydistrict: "04",
@@ -163,7 +163,7 @@ export const popNeighbData: PopNeighbDataType[] = [
   {
     _2010_population: 182896,
     _2020_population: 200293,
-    _2030_population: 111111,
+    _2030_population: 200293,
     borough: "Brooklyn",
     communityDistrictName:
       "East New York, Broadway Junction, City Line, Cypress Hills, New Lots",
