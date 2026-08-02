@@ -29,7 +29,10 @@ export default function Sidebar({
 
         <div className="sidebar-sorting-button-section">
           <YearButton year={year} yearDropdownSubmit={yearDropdownSubmit} />
-          <RefuseTypeButtonsRadio refuseTypeSubmit={refuseTypeSubmit} />
+          <RefuseTypeButtonsRadio
+            refuseTypeSubmit={refuseTypeSubmit}
+            year={year}
+          />
           <SortOrderRadio sortOrderRadioSubmit={sortOrderRadioSubmit} />
         </div>
 
