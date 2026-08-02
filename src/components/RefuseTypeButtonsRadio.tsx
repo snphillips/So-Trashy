@@ -1,10 +1,16 @@
 import { ChangeEvent } from "react";
+import { isRefuseTypeAvailable } from "../utilities/getRefuseDataNote";
 
 type Props = {
   refuseTypeSubmit: (event: ChangeEvent<HTMLFormElement>) => void;
+  year: number;
 };
 
-export default function RefuseTypeButtonsRadio({ refuseTypeSubmit }: Props) {
+export default function RefuseTypeButtonsRadio({
+  refuseTypeSubmit,
+  year,
+}: Props) {
+  const organicsAvailable = isRefuseTypeAvailable(year, "resorganicstons");
   return (
     <form
       className="radio-toolbar"
@@ -63,8 +69,14 @@ export default function RefuseTypeButtonsRadio({ refuseTypeSubmit }: Props) {
           name="radioType"
           id="resorganicstons"
           value="brown bin organics"
+          disabled={!organicsAvailable}
         />
-        <label htmlFor="resorganicstons">🥬🥕🍎 brown bin organics</label>
+        <label
+          htmlFor="resorganicstons"
+          className={!organicsAvailable ? "disabled-label" : ""}
+        >
+          🥬🥕🍎 brown bin organics
+        </label>
         <br />
 
         <input

@@ -323,6 +323,11 @@ note: these are radio buttons in disguise;
   width: 10rem;
 }
 
+.radio-toolbar input[type="radio"]:disabled + label {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 /*****************************************
 /*****************************************
 /*****************************************
