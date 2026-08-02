@@ -6,9 +6,9 @@ So Trashy is a data visualization that compares New York City's Department of Sa
 
 View site here: https://so-trashy.netlify.app/
 
-<img src="./assets/screenshot-01.png" width="400" alt="screen capture of app">
-<img src="./assets/screenshot-02.png" width="400" alt="screen capture of app">
-<img src="./assets/screenshot-03.png" width="400" alt="screen capture of app">
+<img src="./assets/screenshot-01.png" width="500" alt="screen capture of app">
+<img src="./assets/screenshot-02.png" width="500" alt="screen capture of app">
+<img src="./assets/screenshot-03.png" width="500" alt="screen capture of app">
 
 ## Site Features
 
