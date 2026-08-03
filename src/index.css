@@ -324,12 +324,10 @@ note: these are radio buttons in disguise;
 }
 
 .radio-toolbar input[type="radio"]:disabled + label {
-  opacity: 0.6;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 .radio-toolbar input[type="radio"]:disabled + label:hover {
-  /* opacity: 0.6; */
-  /* cursor: not-allowed; */
   background-color: var(--yellow);
 }
 
@@ -383,7 +381,7 @@ note: these are radio buttons in disguise;
 
   form {
     text-align: center;
-    padding-top: 1rem;
+    padding-top: unset;
   }
 
   div#radio-toolbar-type.radio-toolbar label {
@@ -396,8 +394,8 @@ note: these are radio buttons in disguise;
   h2 {
     margin-bottom: 12px; /* keep. removes default h2 margin */
     /* border-bottom: .4rem solid #ffcd44; */
-    font-size: 120%;
-    line-height: 36px;
+    font-size: 100%;
+    line-height: 30px;
   }
 
   svg {

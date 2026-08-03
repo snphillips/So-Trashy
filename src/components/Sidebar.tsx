@@ -24,7 +24,7 @@ export default function Sidebar({
 
         <p className="sidebar-text">
           Visualizing a neighborhood comparison of trash, recycling, and compost
-          pick-up in New York City.
+          pick-up in New York City, in pounds per person, per year.
         </p>
 
         <div className="sidebar-sorting-button-section">

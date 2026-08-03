@@ -226,10 +226,7 @@ export function drawChart(
     .attr("class", "label")
     .merge(labels)
     .style("opacity", 0)
-    .text(
-      (d: DataItemType) =>
-        formatPoundsPerPerson(poundsPerPerson(d)) + " lbs/person",
-    )
+    .text((d: DataItemType) => formatPoundsPerPerson(poundsPerPerson(d)))
     .attr("y", (d) => yScale(d.boroughDistrict)! + 20)
     .attr("x", (d) => xScale(poundsPerPerson(d)) + 5)
     .style("opacity", 1);
