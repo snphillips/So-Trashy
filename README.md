@@ -25,15 +25,6 @@ View site here: https://so-trashy.netlify.app/
 - D3.js (v5)
 - Vite
 - Lodash
-## Project Structure
- 
-```
-src/
-├── components/     # React UI components (Sidebar, BarChart, ChartHeader, etc.)
-├── data/           # Static datasets (population by district, known data-gap notes)
-├── types/          # Shared TypeScript types
-└── utilities/      # Data transformation, chart drawing, and tooltip logic
-```
  
 ## Data Sources
  
