@@ -78,7 +78,8 @@ https://bytearcher.com/articles/using-npm-update-and-npm-outdated-to-update-depe
   npm outdated
 ```
 
-- Ask npm to install the latest version of a package, using the `@latest` tag and `--save` flag to update `package.json`. For instance, to update lodash:
+- Ask AI to review your outdated packages to see if it recognizes any conflicts before you update the packages. Ask it for an order to update packages safely.
+- Use npm to install the latest version of a package, using the `@latest` tag and `--save` flag to update `package.json`. For instance, to update lodash:
 
 ```
   npm install lodash@latest --save
