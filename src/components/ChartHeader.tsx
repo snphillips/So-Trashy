@@ -1,5 +1,6 @@
 import { RefuseTypes, RefuseHeadingType } from "../types/types";
 import { getRefuseDataNote } from "../utilities/getRefuseDataNote";
+import { getMeanMedian } from "../utilities/getMeanMedian";
 
 type Props = {
   year: number;
@@ -37,7 +38,9 @@ export default function ChartHeader({ year, refuseType }: Props) {
   }
 
   const note = getRefuseDataNote(year, refuseType);
+  const meanMedian = getMeanMedian(year, refuseType);
   console.log("note lookup result:", note);
+  console.log("meanMedian lookup result:", meanMedian);
 
   return (
     <div>
@@ -46,6 +49,7 @@ export default function ChartHeader({ year, refuseType }: Props) {
         <span id="chart-year">{year}</span>
       </h2>
       {note && <p id="chart-data-note">{note}</p>}
+      {meanMedian && <p id="mean-median-phrase">{meanMedian}</p>}
     </div>
   );
 }

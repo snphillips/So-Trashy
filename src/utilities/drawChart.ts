@@ -8,8 +8,13 @@ import {
   generateTooltipHTML,
 } from "./tooltip";
 import { formatPoundsPerPerson } from "./formatPoundsPerPerson";
+import { LBS_PER_TON } from "./constants";
+import {
+  getPopulation,
+  poundsPerPerson as poundsPerPersonUtil,
+} from "./poundsPerPerson";
 
-const LBS_PER_TON = 2000;
+// remove the local LBS_PER_TON, getPopulation, poundsPerPerson definitions, replace with:
 
 function getOrCreateGroup<PElement extends d3.BaseType, PDatum>(
   parent: d3.Selection<SVGGElement, unknown, PElement, PDatum>,
@@ -26,11 +31,15 @@ export function drawChart(
   refuseType: RefuseTypes,
   year: number,
 ) {
-  const getPopulation = (d: DataItemType) =>
-    year >= 2020 ? d._2020_population : d._2010_population;
+  // const getPopulation = (d: DataItemType) =>
+  //   year >= 2020 ? d._2020_population : d._2010_population;
 
+  // const poundsPerPerson = (d: DataItemType) =>
+  //   (d[refuseType] / getPopulation(d)) * LBS_PER_TON;
+
+  const getPopulationForYear = (d: DataItemType) => getPopulation(d, year);
   const poundsPerPerson = (d: DataItemType) =>
-    (d[refuseType] / getPopulation(d)) * LBS_PER_TON;
+    poundsPerPersonUtil(d, refuseType, year);
 
   d3.selectAll("svg > *").remove();
   const svg = d3.select("svg");
@@ -133,7 +142,8 @@ export function drawChart(
           d,
           refuseType,
           year,
-          getPopulation,
+          // getPopulation,
+          getPopulationForYear,
         );
         shelf.classList.add("visible");
         shelf.classList.remove("hidden");
@@ -141,7 +151,7 @@ export function drawChart(
     } else {
       tooltip
         .classed("hidden", false)
-        .html(generateTooltipHTML(d, refuseType, year, getPopulation));
+        .html(generateTooltipHTML(d, refuseType, year, getPopulationForYear));
       const tooltipNode = tooltip.node();
       if (tooltipNode) {
         const { width, height } = tooltipNode.getBoundingClientRect();
@@ -163,7 +173,7 @@ export function drawChart(
 
     tooltip
       .classed("hidden", false)
-      .html(generateTooltipHTML(d, refuseType, year, getPopulation));
+      .html(generateTooltipHTML(d, refuseType, year, getPopulationForYear));
 
     const tooltipNode = tooltip.node();
     if (!tooltipNode) return;

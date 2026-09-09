@@ -1,8 +1,9 @@
 import * as d3 from "d3";
 import { DataItemType, RefuseTypes } from "../types/types";
-import { formatPoundsPerPerson } from "./formatPoundsPerPerson";
+// import { formatPoundsPerPerson } from "./formatPoundsPerPerson";
+import { MOBILE_BREAKPOINT_PX } from "./constants";
 
-const MOBILE_BREAKPOINT_PX = 768;
+// const MOBILE_BREAKPOINT_PX = 768;
 
 export function ensureTooltipShelf(): void {
   if (document.getElementById("info-shelf")) return;
