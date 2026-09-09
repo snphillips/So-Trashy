@@ -276,3 +276,8 @@ export interface RefuseDataNoteType {
   note: string;
   dataAvailable: boolean; // false = no data exists at all, grey out the button
 }
+
+export interface MeanMedianType {
+  mean: string;
+  median: string;
+}

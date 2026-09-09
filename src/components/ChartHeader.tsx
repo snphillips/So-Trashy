@@ -1,17 +1,13 @@
-import { RefuseTypes, RefuseHeadingType } from "../types/types";
+import { RefuseTypes, RefuseHeadingType, MeanMedianType } from "../types/types";
 import { getRefuseDataNote } from "../utilities/getRefuseDataNote";
 
 type Props = {
   year: number;
   refuseType: RefuseTypes;
-  meanMedianPhrase: string;
+  meanMedian: MeanMedianType | null;
 };
 
-export default function ChartHeader({
-  year,
-  refuseType,
-  meanMedianPhrase,
-}: Props) {
+export default function ChartHeader({ year, refuseType, meanMedian }: Props) {
   console.log("ChartHeader props:", { year, refuseType });
   let heading: RefuseHeadingType;
 
@@ -42,9 +38,7 @@ export default function ChartHeader({
   }
 
   const note = getRefuseDataNote(year, refuseType);
-  // const meanMedian = getMeanMedian(year, refuseType);
   console.log("note lookup result:", note);
-  // console.log("meanMedian lookup result:", meanMedian);
 
   return (
     <div>
@@ -53,7 +47,13 @@ export default function ChartHeader({
         <span id="chart-year">{year}</span>
       </h2>
       {note && <p id="chart-data-note">{note}</p>}
-      {meanMedianPhrase && <p id="mean-median-phrase">{meanMedianPhrase}</p>}
+      {meanMedian && (
+        <p id="mean-median-phrase">
+          {meanMedian.mean}
+          <br />
+          {meanMedian.median}
+        </p>
+      )}
     </div>
   );
 }

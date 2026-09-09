@@ -87,10 +87,16 @@ h3.weight-description {
   text-align: center;
 }
 
-#chart-data-note,
-#mean-median-phrase {
+#chart-data-note {
   font-size: 80%;
   font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0.25rem 0 0 0;
+}
+
+#mean-median-phrase {
+  font-size: 90%;
+  /* font-style: italic; */
   color: rgba(255, 255, 255, 0.6);
   margin: 0.25rem 0 0 0;
 }
