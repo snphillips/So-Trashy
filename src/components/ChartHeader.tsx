@@ -1,4 +1,3 @@
-import React from "react";
 import { RefuseTypes, RefuseHeadingType } from "../types/types";
 import { getRefuseDataNote } from "../utilities/getRefuseDataNote";
 
@@ -46,11 +45,7 @@ export default function ChartHeader({ year, refuseType }: Props) {
         <span id="chart-description">Comparing {heading} Collection for </span>
         <span id="chart-year">{year}</span>
       </h2>
-      {note && (
-        <p id="chart-data-note" className="chart-data-note">
-          {note}
-        </p>
-      )}
+      {note && <p id="chart-data-note">{note}</p>}
     </div>
   );
 }

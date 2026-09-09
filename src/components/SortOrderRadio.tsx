@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import { ChangeEvent } from "react";
 
 type Props = {
   sortOrderRadioSubmit: (event: ChangeEvent<HTMLFormElement>) => void;

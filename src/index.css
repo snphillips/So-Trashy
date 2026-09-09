@@ -87,7 +87,7 @@ h3.weight-description {
   text-align: center;
 }
 
-.chart-data-note {
+#chart-data-note {
   font-size: 80%;
   font-style: italic;
   color: rgba(255, 255, 255, 0.6);

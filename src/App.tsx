@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, useEffect, useCallback } from "react";
+import { useState, ChangeEvent, useEffect, useCallback } from "react";
 import * as d3 from "d3";
 import _lodash from "lodash";
 import popNeighbData from "./data/popNeighbData";
