@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import ChartHeader from "./components/ChartHeader";
 import BarChart from "./components/BarChart";
 import { drawChart } from "./utilities/drawChart";
+import { getMeanMedianPhrase } from "./utilities/meanMedianPhrase";
 import { convertWeightStringToNumber } from "./utilities/convertWeightStringToNumber";
 import LoadingSpinner from "./components/LoadingSpinner";
 import {
@@ -23,6 +24,7 @@ export default function App() {
   const [year, setYear] = useState(new Date().getFullYear()); // defaults to current year
   const [refuseType, setRefuseType] = useState<RefuseTypes>("allcollected");
   const [sortOrder, setSortOrder] = useState<SortOrderType>("ascending");
+  // const [meanMedianPhrase, setmeanMedianPhrase] = useState<string | null>("");
 
   useEffect(() => {
     // Handle changes to data, sortOrder, and refuseType
@@ -31,6 +33,8 @@ export default function App() {
       drawChart(data, refuseType, year);
     }
   }, [data, sortOrder, refuseType, year]);
+
+  const meanMedianPhrase = getMeanMedianPhrase(data, refuseType, year);
 
   useEffect(() => {
     getData();
@@ -293,7 +297,11 @@ export default function App() {
       </div>
 
       <div className="chart-container col-xs-12 col-sm-8 col-md-9 col-lg-9 col-xl-9">
-        <ChartHeader year={year} refuseType={refuseType} />
+        <ChartHeader
+          year={year}
+          refuseType={refuseType}
+          meanMedianPhrase={meanMedianPhrase}
+        />
         <LoadingSpinner loading={loading} />
         {/* TODO: need to test this? */}
         {/* Need to simulate errors */}
